@@ -1,0 +1,11 @@
+#bienvenida {
+  background-image:url(../../assets/img/carroBG.jpg);
+  background-size:cover;
+}
+
+#bienvenida .jumbotron {
+  max-width:800px;
+  margin:auto;
+  border-radius:20px;
+}
+
