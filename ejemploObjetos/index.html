@@ -14,13 +14,23 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#">Taller Rapidito</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Taller Rapidito</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Registrar vehículos</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="listarVehiculos.html">Listar vehículos </a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"> </a></li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="index.html">Registrar vehículos</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="listarVehiculos.html">Listar vehículos </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#"> </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -29,7 +39,9 @@
         <div class="jumbotron">
             <h1>Taller Rapidito</h1>
             <p>Respire! del arreglo de su carro nos ocupamos nosotros</p>
-            <p><a class="btn btn-primary" role="button" href="#">Learn more</a></p>
+            <p>
+                <a class="btn btn-primary" role="button" href="#">Learn more</a>
+            </p>
         </div>
     </section>
     <section id="sctRegistrarAuto">
@@ -39,24 +51,54 @@
                     <h2 class="text-center text-info">Registrar Vehículo</h2>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6" id="contact-box">
-                    <p id="contact-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam magnam natus tempora cumque, aliquam deleniti voluptatibus voluptas. Repellat vel, et itaque commodi iste ab, laudantium voluptas deserunt nobis. </p>
-                    <div class="info-box"><i class="fa fa-map-marker my-info-icons"></i><span class="text-uppercase text-info">DIRECCIÓN </span><span>San Jose, Costa Rica</span></div>
-                    <div class="info-box"><i class="fa fa-envelope my-info-icons"></i><span class="text-uppercase text-info">Correo </span><span>pmonestel@gmail.com </span></div>
-                    <div class="info-box"><i class="fa fa-phone-square my-info-icons"></i><span class="text-uppercase text-info">TELÉFONO </span><span>8888-8888 </span></div>
+                    <p id="contact-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam magnam natus tempora cumque, aliquam
+                        deleniti voluptatibus voluptas. Repellat vel, et itaque commodi iste ab, laudantium voluptas deserunt
+                        nobis. </p>
+                    <div class="info-box">
+                        <i class="fa fa-map-marker my-info-icons"></i>
+                        <span class="text-uppercase text-info">DIRECCIÓN </span>
+                        <span>San Jose, Costa Rica</span>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa fa-envelope my-info-icons"></i>
+                        <span class="text-uppercase text-info">Correo </span>
+                        <span>pmonestel@gmail.com </span>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa fa-phone-square my-info-icons"></i>
+                        <span class="text-uppercase text-info">TELÉFONO </span>
+                        <span>8888-8888 </span>
+                    </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 site-form">
                     <form id="my-form">
-                        <div class="form-group"><label class="sr-only" for="firstname">First Name</label><input class="form-control" type="text" name="firstname" placeholder="Marca" autofocus="" id="txtMarca"></div>
-                        <div class="form-group"><label class="sr-only" for="lastname">Last Name</label><input class="form-control" type="text" name="lastname" placeholder="Modelo" id="txtModelo"></div>
-                        <div class="form-group"><label class="sr-only" for="phonenumber">Phone Number</label><input class="form-control" type="tel" name="phonenumber" required="" placeholder="Año" id="txtAnno"></div>
-                        <div class="form-group"><label class="sr-only" for="email">Email Address</label><input class="form-control" type="text" name="email" required="" placeholder="Capacidad" id="txtCapacidad"></div>
-                        <div class="form-group"><label class="sr-only" for="email">Email Address</label>
-                            <input type="number" name="kilometraje" required placeholder="Kilometraje" class="form-control" id="txtAire" />
+                        <div class="form-group">
+                            <label class="sr-only" for="txtMarca">Marca</label>
+                            <input class="form-control" type="text" name="marca" placeholder="Marca"
+                                autofocus="" id="txtMarca">
                         </div>
                         <div class="form-group">
-                            <label for="email" class="sr-only">Email Address</label>
-                            <input type="checkbox" name="aire" required placeholder="Aire" class="form-control" id="txtAire" />
-                        </div><button class="btn btn-light btn-lg" type="submit" id="form-btn">Registrar </button></form>
+                            <label class="sr-only" for="txtModelo">Modelo</label>
+                            <input class="form-control" type="text" name="modelo" placeholder="Modelo"
+                                id="txtModelo">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="txtAnno">Año</label>
+                            <input class="form-control" type="tel" name="anno" required="" placeholder="Año"
+                                id="txtAnno">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="txtCapacidad">Capacidad</label>
+                            <input class="form-control" type="number" name="email" required="" placeholder="Capacidad"
+                                id="txtCapacidad">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="txtKilometraje">Kilometraje</label>
+                            <input type="number" name="kilometraje" required placeholder="Kilometraje" class="form-control" id="txtKilometraje" />
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                        
+                    </form>
                 </div>
                 <div class="clearfix"></div>
             </div>
