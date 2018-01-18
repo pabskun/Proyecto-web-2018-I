@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Registro de vehículos</h1>
+            <p class="lead">En ésta página usted puede realizar el registro de vehículos para el taller.</p>
+        </div>
+    </div>
+    <section class="container-fuid">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="txtMatricula">Matrícula</label>
+              <input type="text" class="form-control" id="txtMatricula" placeholder="Matrícula">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="txtMarca">Marca</label>
+              <input type="text" class="form-control" id="txtMarca" placeholder="Marca">
+            </div>
+          </div>
+         
+          <div class="form-row">
+             <div class="form-group col-md-6">
+            <label for="txtModelo">Modelo</label>
+            <input type="text" class="form-control" id="txtModelo" placeholder="Modelo">
+          </div>
+            <div class="form-group col-md-6">
+              <label for="sltColor">Color</label>
+              <select id="sltColor" class="form-control">
+                <option selected>Seleccione</option>
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Rojo">Rojo</option>
+                <option value="Negro">Negro</option>
+                <option value="Blanco">Blanco</option>
+              </select>
+            </div>
+            
+          </div>
+         
+          <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar vehículo</button>
+        </form>
+      </section>
+      
+</body>
+</html>
