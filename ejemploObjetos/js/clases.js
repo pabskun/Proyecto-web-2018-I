@@ -6,5 +6,6 @@ class Vehiculo{
         this.capacidad = pcapacidad;
         this.kilometraje = pkilometraje;
     }
+    
 
 }
