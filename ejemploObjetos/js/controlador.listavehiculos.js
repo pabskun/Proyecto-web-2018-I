@@ -6,28 +6,29 @@ function mostrarDatosTabla(){
 
     vehiculos.forEach(objVehiculo => {
         let fila = tbody.insertRow();
-        fila.insertCell();
-        fila.insertCell();
+        let celdaAgregarTrabajo = fila.insertCell();
+        let botonTrabajo = document.createElement('button');
+        botonTrabajo.type = 'button';
+        botonTrabajo.innerHTML = 'Registrar trabajo';
+        botonTrabajo.dataset.matriculaVehiculo = objVehiculo.matricula;//Guarda la matrícula dentro de la propiedad matriculaVehiculo del botón
+
+        celdaAgregarTrabajo.appendChild(botonTrabajo);
+
+        fila.insertCell().innerHTML = objVehiculo.matricula;
         fila.insertCell().innerHTML = objVehiculo.marca;
         fila.insertCell().innerHTML = objVehiculo.modelo;
         fila.insertCell().innerHTML = objVehiculo.anno;
         fila.insertCell().innerHTML = objVehiculo.capacidad;
         fila.insertCell().innerHTML = objVehiculo.kilometraje;
+
+        botonTrabajo.addEventListener('click', asignarTrabajoVehiculo );
     });
 }
 
+function asignarTrabajoVehiculo(){
+    let matricula = this.dataset.matriculaVehiculo; //saca la matricula asociada al botón
+    localStorage.setItem('matriculaSeleccionadaLS',matricula );
 
-// function buscarClienteporCedula(pcedula){
-//     let clientes = getClientes();
-//     let clienteEncontrado;
-
-//     clientes.forEach(obj => {
-//         if(obj.cedula == pcedula){
-//             clienteEncontrado = obj;
-//         }
-//     })
-
-//     return clienteEncontrado;
-// }
-
+    window.location.href = 'registrarTrabajo.html';
+}
 

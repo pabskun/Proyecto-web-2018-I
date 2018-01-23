@@ -29,3 +29,16 @@ class Personaje{
         console.log('Hola me llamo ' + this.nombre);
     }
 }
+
+
+
+class Automovil{
+    constructor(pmatricula, pmarca, pcolor, pmodelo){
+        this.matricula = pmatricula;
+        this.marca = pmarca;
+        this.color = pcolor;
+        this.modelo = pmodelo;
+    }
+}
+
+let objAutomovil = new Automovil();
