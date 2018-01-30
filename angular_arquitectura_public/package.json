@@ -1,0 +1,28 @@
+{
+  "name": "angular-arquitectua-objetos",
+  "version": "1.0.0",
+  "description": "ejemplo de la arquitectura de angular con objetos",
+  "main": "public/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "^1.6.8",
+    "angular-css": "^1.0.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^4.0.0",
+    "bootstrap-material-design": "^4.1.1",
+    "jquery": "^3.3.1",
+    "oclazyload": "^1.1.0",
+    "popper.js": "^1.12.9",
+    "sweetalert": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-nodemon": "^2.2.1"
+  }
+}

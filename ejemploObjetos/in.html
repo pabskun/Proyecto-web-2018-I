@@ -1,0 +1,263 @@
+<article class="font-weight-light mt-2">
+    <h1>Ejercicios de estructuras condicionales</h1>
+    <ol>
+        <li>
+            <p>Dado un n&uacute;mero ingresado por el usuario identifique si el n&uacute;mero es divisible entre 3. (Debe usar
+                el m&oacute;dulo %).</p>
+        </li>
+        <li>
+            <p>Se quiere saber si un estudiante es aceptado en Cenfotec o no. El estudiante es aceptado si su examen de admisión
+                es mayor a 600 o si su puntaje está entre 500 y 600 y además su promedio en el colegio es mayor a 80.</p>
+        </li>
+        <li>
+            <p>En un hospital se ha hecho un estudio sobre los pacientes registrados durante los últimos 10 años, con el objetivo
+                de hacer una aproximación de los costos de internación por paciente. Se obtuvo un costo promedio diario
+                según el tipo de enfermedad que aqueja al paciente. Además se pudo determinar que en promedio todos los
+                pacientes con edad entre 14 y 22 años implican un costo adicional del 10%. La siguiente tabla expresa los
+                costos diarios según el tipo de enfermedad.</p>
+            <table class="table table-responsive">
+                <caption>Lista de enfermedades</caption>
+                <thead class="bg-dark">
+                    <tr class="text-warning">
+                        <th scope="col">Tipo de enfermedad</th>
+                        <th scope="col">Costo paciente por d&iacute;a</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white text-dark">
+                    <tr>
+                        <td>1</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>32</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Construya un diagrama de flujo que calcule e imprima el costo total que representa un paciente.</p>
+        </li>
+        <li>
+            <p>Se quiere calcular la clave de acceso a una caja fuerte. Para esto se dan tres d&iacute;gitos, llamados a, b
+                y c; y un d&iacute;gito de control llamado d; un d&iacute;gito es un n&uacute;mero de 0-9. Se permite calcular
+                la clave si el d&iacute;gito de control es igual al mayor de los tres d&iacute;gitos menos el menor de los
+                tres d&iacute;gitos. Para calcular los tres d&iacute;gitos de la clave de acceso se siguen los siguientes
+                pasos:</p>
+            <ul>
+                <li>
+                    <p>El primer d&iacute;gito de la clave es: el residuo de la divisi&oacute;n por 10 del cuadrado del menor
+                        de los d&iacute;gitos a, b y c.</p>
+                </li>
+                <li>
+                    <p>El segundo d&iacute;gito de la clave es: el menor de los d&iacute;gitos a, b y c, menos el mayor de los
+                        d&iacute;gitos a, b y c, multiplicado por &ndash;1.</p>
+                </li>
+                <li>
+                    <p>El tercer d&iacute;gito de la clave se calcula as&iacute;: se eleva el mayor de los d&iacute;gitos a,
+                        b y c, al cubo. Si el cubo es divisible por 3 y divisible por 2, el tercer d&iacute;gito de la clave
+                        es 1. Si el cubo es divisible por 3, pero no divisible por 2, el tercer d&iacute;gito de la clave
+                        es 2. Si el cubo no es divisible por 3 pero s&iacute; es divisible por 2, el tercer d&iacute;gito
+                        de la clave es 3 Y si el cubo no es divisible por 3 y no es divisible por 2, el tercer d&iacute;gito
+                        de la clave es 4.</p>
+                    <p>Hacer un programa que dado los datos de entrada imprima en pantalla la clave de acceso a la caja fuerte,
+                        en caso de que se pueda calcular, o un mensaje de que no se puede calcular la clave. EJ: si los d&iacute;gitos
+                        a, b, c y d son 4, 5, 8 y 4, respectivamente, debe imprimir que la clave es 643.</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>Realice un programa que dado un d&iacute;a, mes y a&ntilde;o, de nacimiento indique el signo zodiacal al que
+                pertenece la persona teniendo en cuenta que:</p>
+            <table class="table table-responsive">
+                <caption>Lista de signos</caption>
+                <thead class="bg-dark">
+                    <tr class="text-warning">
+                        <th scope="col">Signo zodiacal</th>
+                        <th scope="col">Fechas</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white text-dark">
+                    <tr>
+                        <td>Aries</td>
+                        <td>20 Abril &ndash; 14 Mayo</td>
+                    </tr>
+                    <tr>
+                        <td>Tauro</td>
+                        <td>15 Mayo &ndash; 21 Junio</td>
+                    </tr>
+                    <tr>
+                        <td>G&eacute;minis</td>
+                        <td>22 June &ndash; 20 Julio</td>
+                    </tr>
+                    <tr>
+                        <td>C&aacute;ncer</td>
+                        <td>21 Julio &ndash; 10 Agosto</td>
+                    </tr>
+                    <tr>
+                        <td>Leo</td>
+                        <td>11 Agosto &ndash; 16 Septiembre</td>
+                    </tr>
+                    <tr>
+                        <td>Virgo</td>
+                        <td>17 Septiembre &ndash; 31 Octubre</td>
+                    </tr>
+                    <tr>
+                        <td>Libra</td>
+                        <td>1 Noviembre &ndash; 21 Noviembre</td>
+                    </tr>
+                    <tr>
+                        <td>Escorpi&oacute;n</td>
+                        <td>22 Noviembre &ndash; 29 Noviembre</td>
+                    </tr>
+                    <tr>
+                        <td>Ophiuchus</td>
+                        <td>30 Noviembre &ndash; 17 Diciembre</td>
+                    </tr>
+                    <tr>
+                        <td>Sagitario</td>
+                        <td>18 Diciembre &ndash; 20 Enero</td>
+                    </tr>
+                    <tr>
+                        <td>Capricornio</td>
+                        <td>21 Enero &ndash; 16 Febrero</td>
+                    </tr>
+                    <tr>
+                        <td>Acuario</td>
+                        <td>17 Febrero &ndash; 12 Marzo</td>
+                    </tr>
+                    <tr>
+                        <td>Piscis</td>
+                        <td>13 Marzo &ndash; 19 Abril</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Adem&aacute;s si el a&ntilde;o es m&uacute;ltiplo de 3, debe dar agregar un mensaje que diga : &ldquo;Euphoria&rdquo;.
+                Si es m&uacute;ltiplo de 2 : &ldquo;Jan-jan&rdquo; y si es m&uacute;ltiplo de 7 : &ldquo;Abanibi&rdquo;.</p>
+        </li>
+        <li>
+            <p>El costo de llamadas telef&oacute;nicas internacionales depende de la zona geogr&aacute;fica en la que se encuentra
+                el pa&iacute;s destino y del n&uacute;mero de minutos hablados. En la siguiente tabla se presenta el costo
+                del minuto por zona. A cada zona se le ha asociado una clave.</p>
+            <table class="table table-responsive">
+                <caption>Lista de zonas</caption>
+                <thead class="bg-dark">
+                    <tr class="text-warning">
+                        <th scope="col">Clave</th>
+                        <th scope="col">Zona</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white text-dark">
+                    <tr>
+                        <td>12</td>
+                        <td>Am&eacute;rica del norte</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Am&eacute;rica central</td>
+                        <td>2.2</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Am&eacute;rica del sur</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Europa</td>
+                        <td>3.5</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Asia</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>&Aacute;frica</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Ocean&iacute;a</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Construya un diagrama de flujo que permita calcular e imprimir el costo total de una llamada y el nombre de la
+                zona a la cual llam&oacute;.</p>
+            <p>Si la zona es Europa o Asia y la cantidad de minutos es mayor a 25 entonces se debe realizar un 5% de descuento.</p>
+            <p>Debe imprimir el costo total de la llamada, el subtotal , el descuento aplicado y la zona a la cual se llamo.</p>
+        </li>
+        <li>
+            <p>El se&ntilde;or Taric de Ez es un famoso joyero que ascendi&oacute; en el Monte Targon, Taric posee una venta
+                de gemas en la famosa ciudad de Runaterra donde generalmente compra o vende algunas que otras gemas. Los
+                clientes m&aacute;s frecuentes de los que recibe pedidos el se&ntilde;or Taric de Ez son : el se&ntilde;or
+                Zilean Buena-onda, la se&ntilde;ora Miss Fortune de Arcadia, el Se&ntilde;or Ezreal Galante, y el se&ntilde;or
+                Malphite Coraza de Acero. Los clientes pueden vender o comprar gemas. A continuaci&oacute;n se muestran el
+                precio de las diferentes gemas tanto de compra como de venta.</p>
+            <p>Sabiendo el nombre del cliente , la gema y el tipo de transacci&oacute;n que se quiere hacer se procede a determinar
+                el costo del producto:</p>
+            <p>La se&ntilde;ora Miss Fortune de Arcadia y Malphite Coraza de Acero reciben un 6% de descuento en los precios
+                de compra, y un 3% de ingreso adicional en los costos de venta. El se&ntilde;or Zilean Buena Onda &uacute;nicamente
+                recibe descuento en las compras de 4.5%. Mientras que el se&ntilde;or Ezreal Galante puede realizar pedidos
+                de compra de forma gratuita y recibe un beneficio del 34% adicional cuando vende gemas. Si el cliente no
+                es ninguno de los anteriores no recibe ning&uacute;n beneficio al vender pero si un impuesto de compra del
+                13%.</p>
+            <p>Adem&aacute;s el Se&ntilde;or Taric de Ez por cada pedido env&iacute;a una postal de agradecimiento dependiendo
+                de la gema que se haya vendido o comprado, para cada gema principal se manda una frase diferente que se puede
+                observar en la tabla. En caso de que la gema no se encuentre dentro de la lista la frase que env&iacute;a
+                es : "Gemas .... Las gemas son escandalosas ... son verdaderamente .... escandalosas".</p>
+            <p>Indique el resultado de la transacci&oacute;n de la siguiente manera: tipo de transacci&oacute;n, monto de dinero,
+                el nombre de la gema seleccionada y la frase que se env&iacute;a en la postal.</p>
+            <div class="table-responsive">
+                <table class="table">
+                <caption>Lista de gemas</caption>
+                <thead class="bg-dark">
+                    <tr class="text-warning">
+                        <th scope="col">Gema</th>
+                        <th scope="col">Precio de compra</th>
+                        <th scope="col">Precio de venta</th>
+                        <th scope="col">Frase</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white text-dark">
+                    <tr>
+                        <td>Esmeralda</td>
+                        <td>1100</td>
+                        <td>1300</td>
+                        <td>La esmeralda para la perspicacia </td>
+                    </tr>
+                    <tr>
+                        <td>Ópalo</td>
+                        <td>450</td>
+                        <td>700</td>
+                        <td>El ópalo para la armonía</td>
+                    </tr>
+                    <tr>
+                        <td>Zafiro</td>
+                        <td>560</td>
+                        <td>900</td>
+                        <td>El zafiro para la divinidad</td>
+                    </tr>
+                    <tr>
+                        <td>Rubí</td>
+                        <td>1000</td>
+                        <td>1150</td>
+                        <td>El rubí para el vigor</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        </li>
+    </ol>
+</article>
