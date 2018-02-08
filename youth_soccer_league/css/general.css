@@ -1,0 +1,49 @@
+body{
+  font-size:  16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Start: header styles */
+header#principal_header{
+  background: #000;
+  display: flow-root;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 25px;
+  
+}
+header#principal_header h1{
+  color: #fff;
+  font-size: 20px;
+}
+header#principal_header .img_container{
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 20px;
+}
+header#principal_header .img_container img{
+  width: 100%;
+  height: 100%;
+}
+header#principal_header nav{
+  float: left;
+  padding: 20px 0;
+}
+header#principal_header nav a{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+header#principal_header nav a:hover{
+  color: #a6ff2a;
+}
+.button{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: #033949;
+  padding: 10px;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}

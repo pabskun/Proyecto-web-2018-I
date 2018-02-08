@@ -1,0 +1,40 @@
+
+
+/* Start: main styles */
+main{
+  display: flow-root;
+}
+main section{
+  width: 30%;
+  margin-right: 4%;
+  float:left;
+  border-right: 2px solid #033949;
+  min-height: 400px;
+}
+section:last-child{
+  margin-right: 0px;
+  border-right: 0;
+}
+main section>h2{
+  background: #fff;
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+
+}
+main section p{
+  line-height: 25px;
+  text-align: justify;
+  padding: 15px;
+
+}
+main section .img_container{
+  height:180px;
+  width: 150px;
+  margin: 0 auto;
+}
+main section .img_container img{
+  width: 100%;
+  height: 100%;
+}
+
