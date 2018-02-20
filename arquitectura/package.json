@@ -1,0 +1,47 @@
+{
+  "name": "arquitectura",
+  "version": "1.0.0",
+  "description": "Arquitectura de proyecto",
+  "main": "./public/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1.git"
+  },
+  "keywords": [
+    "MEAN",
+    "ANGULARJS",
+    "BOOTSTRAP4",
+    "JQUERY",
+    "NODEJS"
+  ],
+  "author": {
+    "name": "Kevin Aguilar",
+    "email": "kaguilara@ucenfotec.ac.cr",
+    "url": "https://twitter.com/kaguilara_"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1/issues"
+  },
+  "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.4.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-todo": "^5.4.0"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "oclazyload": "^1.1.0",
+    "popper.js": "^1.12.9",
+    "sweetalert": "^2.1.0",
+    "ui-router-page-title": "^1.0.4"
+  }
+}

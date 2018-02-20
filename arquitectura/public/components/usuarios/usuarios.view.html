@@ -1,0 +1,42 @@
+<div>
+
+  <form ng-submit="vm.registrarUsuario(vm.nuevoUsuario)">
+
+    <label for="">Cédula</label>
+    <input type="text" ng-model="vm.nuevoUsuario.cedula">
+
+    <label for="">Nombre 1</label>
+    <input type="text" ng-model="vm.nuevoUsuario.nombre1">
+
+    <label for="">Apellido 1</label>
+    <input type="text" ng-model="vm.nuevoUsuario.apellido1">
+
+    <label for="">Edad</label>
+    <input type="number" ng-model="vm.nuevoUsuario.edad">
+
+    <button type="submit">Registrar</button>
+
+  </form>
+
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="usuario in vm.listaUsuarios">
+        <td>{{usuario.cedula}}</td>
+        <td>{{usuario.nombre1}}</td>
+        <td>{{usuario.apellido1}}</td>
+        <td>{{usuario.edad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

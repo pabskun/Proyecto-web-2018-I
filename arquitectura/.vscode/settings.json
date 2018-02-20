@@ -1,0 +1,14 @@
+{
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 2,
+    "material-icon-theme.activeIconPack": "angular",
+    "material-icon-theme.files.associations": {
+        "*.controller.js": "angular-component",
+        "route.js": "angular-routing",
+        "app.js": "angular"
+    },
+    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    "editor.tabSize": 2
+}
