@@ -43,6 +43,7 @@ gulp
 
 Y para finalizar, automaticamente, la tarea abre navegador dentro de un servidor local
 
-## Authors
+## Autores
 
 * [Kevin Aguilar](https://github.com/KaguilarA)
+* [Pabs Monestel](https://github.com/pabskun)
