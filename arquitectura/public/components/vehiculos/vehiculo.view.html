@@ -1,3 +1,5 @@
+<h1>Vehiculos a nombre de {{vm.usuarioActivo}}</h1>
+
 <div class="col-4">
 
     <form ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
@@ -21,5 +23,28 @@
 
     </form>
 
+</div>
+
+<div class="col-9">
+  <table class="table">
+    <thead>
+        <tr>
+          <th>Modelo</th>
+          <th>Matricula</th>
+          <th>Marca</th>
+          <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="vehiculo in vm.listaVehiculos">
+        <td>{{vehiculo.modelo}}</td>
+        <td>{{vehiculo.matricula}}</td>
+        <td>{{vehiculo.marca}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" ng-click="vm.registrarArreglo(vehiculo)">Reparaciones</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 

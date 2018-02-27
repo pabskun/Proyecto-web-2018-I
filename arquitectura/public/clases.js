@@ -12,8 +12,16 @@ class Cliente{
     this.vehiculos.push(pnuevoVehiculo);
   }
 
+  getVehiculos(){
+    return this.vehiculos;
+  }
+
   getcedula(){
     return this.cedula;
+  }
+
+  getNombre(){
+    return `${this.nombre1} ${this.apellido1}`;
   }
 }
 
@@ -27,5 +35,24 @@ class Vehiculo{
 
   agregarReparaciones(pnuevaReparacion){
     this.reparaciones.push(pnuevaReparacion);
+  }
+
+  getReparaciones(){
+    return this.reparaciones;
+  }
+
+  getmatricula(){
+    return this.matricula;
+  }
+
+  getInfoVehiculo(){
+    return `${this.marca} ${this.modelo}`;
+  }
+}
+
+class Reparaciones{
+  constructor(pcosto, pdescripcion){
+    this.costo = pcosto;
+    this.descripcion = pdescripcion;
   }
 }

@@ -47,8 +47,25 @@
         },
         controller: 'controladorVehiculo',
         controllerAs: 'vm'
-
       })
+
+      .state('reparaciones', {
+        url: '/works',
+        templateUrl: 'components/reparaciones/reparaciones.view.html',
+        data:{
+          pageTitle: 'Registro reparaciones | Ejemplo Arquitectura'
+        },
+        params: {
+          objVehiculoTemp: ''
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/reparaciones/reparaciones.controller.js')
+          }]
+        },
+        controller: 'controladorReparaciones',
+        controllerAs: 'vm'
+      });
 
     $urlRouterProvider.otherwise('/users');
   };
