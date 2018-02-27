@@ -33,6 +33,16 @@
       servicioUsuarios.addReparaciones(objVehiculo, objReparacion);
 
       listaReparaciones();
+
+      swal("Registro exitoso", "Se ha registrado correctamente la reparación", "success", {
+        button: "Aceptar",
+      });
+
+      vm.nuevaReparacion = null;
+    }
+
+    vm.volver = () => {
+      $state.go('usuarios');
     }
 
     function listaReparaciones(){

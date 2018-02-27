@@ -32,7 +32,7 @@
 
       servicioUsuarios.addVehiculo(objVehiculoNuevo, objUsuario);
 
-      swal("Registro exitoso", "El usuario ha sido registrado correctamente", "success", {
+      swal("Registro exitoso", "Se ha registrado correctamente el vehiculo", "success", {
         button: "Aceptar",
       });
 
@@ -45,6 +45,10 @@
       console.log(pVehiculo);
 
       $state.go('reparaciones', {objVehiculoTemp: JSON.stringify(pVehiculo)})
+    }
+
+    vm.volver = () => {
+      $state.go('usuarios');
     }
 
     function listarVehiculos() {

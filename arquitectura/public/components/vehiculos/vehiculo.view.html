@@ -1,6 +1,6 @@
 <h1>Vehiculos a nombre de {{vm.usuarioActivo}}</h1>
 
-<div class="col-4">
+<div class="col-4 my-3">
 
     <form ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
 
@@ -19,7 +19,9 @@
         <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.marca">
       </div>
 
-      <button type="submit" class="btn btn-primary">Registrar</button>
+      <button type="submit" class="btn btn-success">Registrar</button>
+
+      <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
 
     </form>
 
@@ -41,7 +43,7 @@
         <td>{{vehiculo.matricula}}</td>
         <td>{{vehiculo.marca}}</td>
         <td>
-          <button type="button" class="btn btn-danger" ng-click="vm.registrarArreglo(vehiculo)">Reparaciones</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(vehiculo)">Reparaciones</button>
         </td>
       </tr>
     </tbody>

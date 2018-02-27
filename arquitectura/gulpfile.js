@@ -4,7 +4,12 @@ const gulp = require('gulp'),
       connect = require('gulp-connect'),
       nodemon = require('gulp-nodemon'),
       todo = require('gulp-todo'),
-      browserSync = require('browser-sync');
+      browserSync = require('browser-sync'),
+      paths = {
+        views : './public/components/**/**/*.html',
+        styles : './public/components/**/**/*.css',
+        js: './public/components/**/**/*.js'
+      };
 
 gulp.task('connect', () => {
   connect.server({
@@ -18,7 +23,7 @@ gulp.task('connect', () => {
 });
 
 gulp.task('to-do', () => {
-  gulp.src(['./public/**/**/**/**/*.js'])
+  gulp.src(paths.js)
   .pipe(todo())
   .pipe(gulp.dest('./'));
 });
@@ -52,30 +57,13 @@ gulp.task('dependencies', () => {
 });
 
 gulp.task('reload', () => {
-  gulp.src([
-    './public/components/**/*.html',
-    './public/components/**/*.css',
-    './public/components/**/*.js'
-  ])
+  gulp.src([paths.views, paths.styles, paths.js])
     .pipe(connect.reload())
     .pipe(browserSync.stream());
 });
 
 gulp.task('watch', () => {
-  gulp.watch([
-    './public/*.html',
-    './public/components/*.html',
-    './public/components/**/*.html',
-    './public/components/**/**/*.html',
-    './public/*.css',
-    './public/components/*.css',
-    './public/components/**/*.css',
-    './public/components/**/**/*.css',
-    './public/*.js',
-    './public/components/*.js',
-    './public/components/**/*.js',
-    './public/components/**/**/*.js'
-  ], ['reload', 'to-do'])
+  gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
     .on('change', browserSync.reload);
 });
 

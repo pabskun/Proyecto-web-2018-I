@@ -1,6 +1,6 @@
 <h1>Reparaciones del vehiculo {{vm.infoVehiculos}}</h1>
 
-<div class="col-4">
+<div class="col-4 my-3">
 
   <form ng-submit="vm.registrarReparacion(vm.nuevaReparacion)">
 
@@ -14,7 +14,9 @@
       <input type="text" class="form-control" ng-model="vm.nuevaReparacion.descripcion">
     </div>
 
-    <button type="submit" class="btn btn-primary">Registrar</button>
+    <button type="submit" class="btn btn-success">Registrar</button>
+
+    <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
 
   </form>
 
