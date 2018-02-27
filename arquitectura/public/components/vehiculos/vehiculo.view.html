@@ -1,0 +1,25 @@
+<div class="col-4">
+
+    <form ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
+
+      <div class="form-group">
+        <label for="">Modelo del Vehiculo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.modelo">
+      </div>
+
+      <div class="form-group">
+        <label for="">Matricula</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.matricula">
+      </div>
+
+      <div class="form-group">
+        <label for="">Marca del vehiculo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.marca">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Registrar</button>
+
+    </form>
+
+</div>
+

@@ -4,9 +4,9 @@
   .module('arquitectura')
   .controller('controladorUsuarios', controladorUsuarios);
 
-  controladorUsuarios.$inject = ['servicioUsuarios'];
+  controladorUsuarios.$inject = ['$stateParams', '$state', 'servicioUsuarios'];
 
-  function controladorUsuarios(servicioUsuarios){
+  function controladorUsuarios($stateParams, $state, servicioUsuarios){
     let vm = this;
 
     vm.nuevoUsuario = {};
@@ -38,6 +38,11 @@
       listarUsuarios();
     }
 
+    vm.registrarVehiculo = (pusuario) => {
+      // console.log(pusuario);
+
+      $state.go('vehiculos', { objUsuarioTemp : JSON.stringify(pusuario)});
+    }
 
     function listarUsuarios() {
       vm.listaUsuarios = servicioUsuarios.getUsuarios();

@@ -10,7 +10,8 @@
 
     let publicAPI = {
       addUsuario : _addUsuario,
-      getUsuarios : _getUsuarios
+      getUsuarios : _getUsuarios,
+      addVehiculo : _addVehiculo
     }
     return publicAPI;
 
@@ -39,5 +40,22 @@
 
       return listaUsuarios;
     }
+
+    function _addVehiculo(pvehiculo, pusuario){
+      let listaUsuarios = _getUsuarios();
+
+      for(let i = 0; i < listaUsuarios.length; i++){
+        if (pusuario.getcedula() == listaUsuarios[i].getcedula()){
+          listaUsuarios[i].agregarVehiculo(pvehiculo);
+        }
+      }
+
+      actualizarLocal(listaUsuarios);
+    };
+
+    function actualizarLocal(plistaActualizada){
+      localStorage.setItem('usuariosLS', JSON.stringify(plistaActualizada));
+    }
+
   }
 })();

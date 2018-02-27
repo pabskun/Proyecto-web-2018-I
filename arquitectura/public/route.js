@@ -29,7 +29,26 @@
         },
         controller: 'controladorUsuarios',
         controllerAs: 'vm'
-      });
+      })
+
+      .state('vehiculos', {
+        url: '/cars',
+        templateUrl: './components/vehiculos/vehiculo.view.html',
+        data:{
+          pageTitle: 'Registro vehiculos | Ejemplo Arquitectura'
+        },
+        params: {
+          objUsuarioTemp: ''
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/vehiculos/vehiculo.controller.js')
+          }]
+        },
+        controller: 'controladorVehiculo',
+        controllerAs: 'vm'
+
+      })
 
     $urlRouterProvider.otherwise('/users');
   };

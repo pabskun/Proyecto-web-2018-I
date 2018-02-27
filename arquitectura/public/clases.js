@@ -5,5 +5,27 @@ class Cliente{
     this.nombre1 = pNombre1;
     this.apellido1 = pApellido1;
     this.edad = pEdad;
+    this.vehiculos = [];
+  }
+
+  agregarVehiculo(pnuevoVehiculo) {
+    this.vehiculos.push(pnuevoVehiculo);
+  }
+
+  getcedula(){
+    return this.cedula;
+  }
+}
+
+class Vehiculo{
+  constructor(pmodelo, pmatricula, pmarca){
+    this.modelo = pmodelo;
+    this.matricula = pmatricula;
+    this.marca = pmarca;
+    this.reparaciones = [];
+  }
+
+  agregarReparaciones(pnuevaReparacion){
+    this.reparaciones.push(pnuevaReparacion);
   }
 }
