@@ -1,10 +1,13 @@
-// TODO Dentro de este archivo se crean los objetos con sus respectivos métodos
 class Cliente{
-  constructor(pCedula, pNombre1, pApellido1, pEdad){
-    this.cedula = pCedula;
-    this.nombre1 = pNombre1;
-    this.apellido1 = pApellido1;
-    this.edad = pEdad;
+  constructor(pcedula, pnombre1, pnombre2, papellido1, papellido2, pfechanacimiento, pemail, pcontrasenna){
+    this.cedula = pcedula;
+    this.primerNombre = pnombre1;
+    this.segundoNombre = pnombre2
+    this.primerApellido = papellido1;
+    this.segundoApellido = papellido2;
+    this.fechaNacimiento = pfechanacimiento;
+    this.correoElectronico = pemail;
+    this.contrasenna = pcontrasenna
     this.vehiculos = [];
   }
 
@@ -18,6 +21,14 @@ class Cliente{
 
   getcedula(){
     return this.cedula;
+  }
+
+  getContrasenna(){
+    return this.contrasenna;
+  }
+
+  getCorreo(){
+    return this.correoElectronico;
   }
 
   getNombre(){
@@ -54,5 +65,13 @@ class Reparaciones{
   constructor(pcosto, pdescripcion){
     this.costo = pcosto;
     this.descripcion = pdescripcion;
+  }
+
+  getCosto(){
+    return this.costo;
+  }
+
+  getDescripcion(){
+    return this.descripcion;
   }
 }

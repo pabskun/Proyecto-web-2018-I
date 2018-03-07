@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   angular
-  .module('arquitectura')
+  .module('tallerRapidito')
   .service('servicioUsuarios', servicioUsuarios);
 
   servicioUsuarios.$inject = ['$log','$http'];
@@ -18,14 +18,17 @@
     }
     return publicAPI;
 
-    // Funcion que almacena en el localStorage todos los usuarios
     function _addUsuario(pnuevoUsuario){
-      let listaUsuarios = _getUsuarios();
+      let listaUsuarios = _getUsuarios(),
+          registroExitoso = false;
       listaUsuarios.push(pnuevoUsuario);
-      localStorage.setItem('usuariosLS', JSON.stringify(listaUsuarios));
+
+      actualizarLocal(listaUsuarios)
+      registroExitoso = true;
+
+      return registroExitoso;
     }
 
-    // Funcion que trae todos los usuarios del localStorage y a partir de esos datos vuelve a crear un arreglo con todos los objetos de tipo usuario
     function _getUsuarios(){
       let listaUsuarios = [];
       let listaUsuariosLocal = JSON.parse(localStorage.getItem("usuariosLS"));
@@ -35,7 +38,8 @@
       }else{
         listaUsuariosLocal.forEach(obj => {
           
-          let objUsuarios = new Cliente(obj.cedula, obj.nombre1, obj.apellido1, obj.edad);
+          let tempDate = new Date (obj.fechaNacimiento),
+              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna);
 
           obj.vehiculos.forEach(objVehiculo => {
             let objTempVehiculo = new Vehiculo(objVehiculo.modelo, objVehiculo.matricula, objVehiculo.marca);
@@ -81,21 +85,13 @@
       return vehiculosUsuario;
     }
 
-    // Funcion que registra las reparaciones dentro de los vehiculos
     function _addReparaciones(pvehiculo, preparacion){
-      let listaUsuarios = _getUsuarios();
-      let listaVehiculos = [];
+      let listaUsuarios = _getUsuarios(),
+          listaVehiculos = [];
 
-      // Ciclo que recorre todos los usuarios
       for(let i = 0; i < listaUsuarios.length; i++){
-        
-        // Ciclo que recorre todos los vehiculos por usuario
         for(let j=0 ;j < listaUsuarios[i].getVehiculos().length; j++){
-
-          // Si la matricula del vehiculo coincide
           if(listaUsuarios[i].getVehiculos()[j].getmatricula() == pvehiculo.getmatricula()){
-
-            // Le registra la reparación
             listaUsuarios[i].getVehiculos()[j].agregarReparaciones(preparacion);
           }
         }
@@ -103,14 +99,12 @@
       actualizarLocal(listaUsuarios);
     }
 
-    // Funcion que obtiene todas las reparaciones de los vehiculos
     function _getReparaciones(objVehiculo){
-      let listaUsuarios = _getUsuarios();
-      let reparacionesVehiculos = [];
+      let listaUsuarios = _getUsuarios(),
+          reparacionesVehiculos = [];
 
       for(let i = 0; i < listaUsuarios.length; i++){
         for(let j=0 ;j < listaUsuarios[i].getVehiculos().length; j++){
-
           if (objVehiculo.getmatricula() == listaUsuarios[i].getVehiculos()[j].getmatricula()){
             reparacionesVehiculos = listaUsuarios[i].getVehiculos()[j].getReparaciones();
           }

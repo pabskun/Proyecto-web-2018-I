@@ -1,0 +1,2372 @@
+[
+    {
+        "idCanton": "101",
+        "name": "Carmen",
+        "_id": "10101"
+    },
+    {
+        "idCanton": "101",
+        "name": "Merced",
+        "_id": "10102"
+    },
+    {
+        "idCanton": "101",
+        "name": "Hospital",
+        "_id": "10103"
+    },
+    {
+        "idCanton": "101",
+        "name": "Catedral",
+        "_id": "10104"
+    },
+    {
+        "idCanton": "101",
+        "name": "Zapote",
+        "_id": "10105"
+    },
+    {
+        "idCanton": "101",
+        "name": "San Francisco de Dos Ríos",
+        "_id": "10106"
+    },
+    {
+        "idCanton": "101",
+        "name": "Uruca",
+        "_id": "10107"
+    },
+    {
+        "idCanton": "101",
+        "name": "Mata Redonda",
+        "_id": "10108"
+    },
+    {
+        "idCanton": "101",
+        "name": "Pavas",
+        "_id": "10109"
+    },
+    {
+        "idCanton": "101",
+        "name": "Hatillo",
+        "_id": "10110"
+    },
+    {
+        "idCanton": "101",
+        "name": "San Sebastián",
+        "_id": "10111"
+    },
+    {
+        "idCanton": "102",
+        "name": "Escazú",
+        "_id": "10201"
+    },
+    {
+        "idCanton": "102",
+        "name": "San Antonio",
+        "_id": "10202"
+    },
+    {
+        "idCanton": "102",
+        "name": "San Rafael",
+        "_id": "10203"
+    },
+    {
+        "idCanton": "103",
+        "name": "Desamparados",
+        "_id": "10301"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Miguel",
+        "_id": "10302"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Juan de Dios",
+        "_id": "10303"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Rafael Arriba",
+        "_id": "10304"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Antonio",
+        "_id": "10305"
+    },
+    {
+        "idCanton": "103",
+        "name": "Frailes",
+        "_id": "10306"
+    },
+    {
+        "idCanton": "103",
+        "name": "Patarrá",
+        "_id": "10307"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Cristóbal",
+        "_id": "10308"
+    },
+    {
+        "idCanton": "103",
+        "name": "Rosario",
+        "_id": "10309"
+    },
+    {
+        "idCanton": "103",
+        "name": "Damas",
+        "_id": "10310"
+    },
+    {
+        "idCanton": "103",
+        "name": "San Rafael Abajo",
+        "_id": "10311"
+    },
+    {
+        "idCanton": "103",
+        "name": "Gravilias",
+        "_id": "10312"
+    },
+    {
+        "idCanton": "103",
+        "name": "Los Guido",
+        "_id": "10313"
+    },
+    {
+        "idCanton": "104",
+        "name": "Santiago",
+        "_id": "10401"
+    },
+    {
+        "idCanton": "104",
+        "name": "Mercedes Sur",
+        "_id": "10402"
+    },
+    {
+        "idCanton": "104",
+        "name": "Barbacoas",
+        "_id": "10403"
+    },
+    {
+        "idCanton": "104",
+        "name": "Grifo Alto",
+        "_id": "10404"
+    },
+    {
+        "idCanton": "104",
+        "name": "San Rafael",
+        "_id": "10405"
+    },
+    {
+        "idCanton": "104",
+        "name": "Candelarita",
+        "_id": "10406"
+    },
+    {
+        "idCanton": "104",
+        "name": "Desamparaditos",
+        "_id": "10407"
+    },
+    {
+        "idCanton": "104",
+        "name": "San Antonio",
+        "_id": "10408"
+    },
+    {
+        "idCanton": "104",
+        "name": "Chires",
+        "_id": "10409"
+    },
+    {
+        "idCanton": "105",
+        "name": "San Marcos",
+        "_id": "10601"
+    },
+    {
+        "idCanton": "105",
+        "name": "San Lorenzo",
+        "_id": "10602"
+    },
+    {
+        "idCanton": "105",
+        "name": "San Carlos",
+        "_id": "10603"
+    },
+    {
+        "idCanton": "106",
+        "name": "Aserrí",
+        "_id": "10604"
+    },
+    {
+        "idCanton": "106",
+        "name": "Tarbaca",
+        "_id": "10605"
+    },
+    {
+        "idCanton": "106",
+        "name": "Vuelta de Jorco",
+        "_id": "10606"
+    },
+    {
+        "idCanton": "106",
+        "name": "San Gabriel",
+        "_id": "10607"
+    },
+    {
+        "idCanton": "106",
+        "name": "Legua",
+        "_id": "10608"
+    },
+    {
+        "idCanton": "106",
+        "name": "Monterrey",
+        "_id": "10609"
+    },
+    {
+        "idCanton": "106",
+        "name": "Salitrillos",
+        "_id": "10610"
+    },
+    {
+        "idCanton": "107",
+        "name": "Colón",
+        "_id": "10701"
+    },
+    {
+        "idCanton": "107",
+        "name": "Guayabo",
+        "_id": "10702"
+    },
+    {
+        "idCanton": "107",
+        "name": "Tabarcia",
+        "_id": "10703"
+    },
+    {
+        "idCanton": "107",
+        "name": "Piedras Negras",
+        "_id": "10704"
+    },
+    {
+        "idCanton": "107",
+        "name": "Picagres",
+        "_id": "10705"
+    },
+    {
+        "idCanton": "107",
+        "name": "Jaris",
+        "_id": "10706"
+    },
+    {
+        "idCanton": "108",
+        "name": "Guadalupe",
+        "_id": "10801"
+    },
+    {
+        "idCanton": "108",
+        "name": "San Francisco",
+        "_id": "10802"
+    },
+    {
+        "idCanton": "108",
+        "name": "Calle Blancos",
+        "_id": "10803"
+    },
+    {
+        "idCanton": "108",
+        "name": "Mata de Plátano",
+        "_id": "10804"
+    },
+    {
+        "idCanton": "108",
+        "name": "Ipís",
+        "_id": "10805"
+    },
+    {
+        "idCanton": "108",
+        "name": "Rancho Redondo",
+        "_id": "10806"
+    },
+    {
+        "idCanton": "108",
+        "name": "Purral",
+        "_id": "10807"
+    },
+    {
+        "idCanton": "109",
+        "name": "Santa Ana",
+        "_id": "10901"
+    },
+    {
+        "idCanton": "109",
+        "name": "Salitral",
+        "_id": "10902"
+    },
+    {
+        "idCanton": "109",
+        "name": "Pozos",
+        "_id": "10903"
+    },
+    {
+        "idCanton": "109",
+        "name": "Uruca",
+        "_id": "10904"
+    },
+    {
+        "idCanton": "109",
+        "name": "Piedades",
+        "_id": "10905"
+    },
+    {
+        "idCanton": "109",
+        "name": "Brasil",
+        "_id": "10906"
+    },
+    {
+        "idCanton": "110",
+        "name": "Alajuelita",
+        "_id": "11001"
+    },
+    {
+        "idCanton": "110",
+        "name": "San Josecito",
+        "_id": "11002"
+    },
+    {
+        "idCanton": "110",
+        "name": "San Antonio",
+        "_id": "11003"
+    },
+    {
+        "idCanton": "110",
+        "name": "Concepción",
+        "_id": "11004"
+    },
+    {
+        "idCanton": "110",
+        "name": "San Felipe",
+        "_id": "11005"
+    },
+    {
+        "idCanton": "111",
+        "name": "San Isidro",
+        "_id": "11101"
+    },
+    {
+        "idCanton": "111",
+        "name": "San Rafael",
+        "_id": "11102"
+    },
+    {
+        "idCanton": "111",
+        "name": "Dulce Nombre de Jesús",
+        "_id": "11103"
+    },
+    {
+        "idCanton": "111",
+        "name": "Patalillo",
+        "_id": "11104"
+    },
+    {
+        "idCanton": "111",
+        "name": "Cascajal",
+        "_id": "11105"
+    },
+    {
+        "idCanton": "112",
+        "name": "San Ignacio",
+        "_id": "11201"
+    },
+    {
+        "idCanton": "112",
+        "name": "Guaitil",
+        "_id": "11202"
+    },
+    {
+        "idCanton": "112",
+        "name": "Palmichal",
+        "_id": "11203"
+    },
+    {
+        "idCanton": "112",
+        "name": "Cangrejal",
+        "_id": "11204"
+    },
+    {
+        "idCanton": "112",
+        "name": "Sabanillas",
+        "_id": "11205"
+    },
+    {
+        "idCanton": "113",
+        "name": "San Juan",
+        "_id": "11301"
+    },
+    {
+        "idCanton": "113",
+        "name": "Cinco Esquinas",
+        "_id": "11302"
+    },
+    {
+        "idCanton": "113",
+        "name": "Anselmo Llorente",
+        "_id": "11303"
+    },
+    {
+        "idCanton": "113",
+        "name": "León XIII",
+        "_id": "11304"
+    },
+    {
+        "idCanton": "113",
+        "name": "Colima",
+        "_id": "11305"
+    },
+    {
+        "idCanton": "114",
+        "name": "San Vicente",
+        "_id": "11401"
+    },
+    {
+        "idCanton": "114",
+        "name": "San Jerónimo",
+        "_id": "11402"
+    },
+    {
+        "idCanton": "114",
+        "name": "La Trinidad",
+        "_id": "11403"
+    },
+    {
+        "idCanton": "115",
+        "name": "San Pedro",
+        "_id": "11501"
+    },
+    {
+        "idCanton": "115",
+        "name": "Sabanilla",
+        "_id": "11502"
+    },
+    {
+        "idCanton": "115",
+        "name": "Mercedes",
+        "_id": "11503"
+    },
+    {
+        "idCanton": "115",
+        "name": "San Rafael",
+        "_id": "11504"
+    },
+    {
+        "idCanton": "116",
+        "name": "San Pablo",
+        "_id": "11601"
+    },
+    {
+        "idCanton": "116",
+        "name": "San Pedro",
+        "_id": "11602"
+    },
+    {
+        "idCanton": "116",
+        "name": "San Juan de Mata",
+        "_id": "11603"
+    },
+    {
+        "idCanton": "116",
+        "name": "San Luis",
+        "_id": "11604"
+    },
+    {
+        "idCanton": "116",
+        "name": "Carara",
+        "_id": "11605"
+    },
+    {
+        "idCanton": "117",
+        "name": "Santa María",
+        "_id": "11701"
+    },
+    {
+        "idCanton": "117",
+        "name": "Jardín",
+        "_id": "11702"
+    },
+    {
+        "idCanton": "117",
+        "name": "Copey",
+        "_id": "11703"
+    },
+    {
+        "idCanton": "118",
+        "name": "Curridabat",
+        "_id": "11801"
+    },
+    {
+        "idCanton": "118",
+        "name": "Granadilla",
+        "_id": "11802"
+    },
+    {
+        "idCanton": "118",
+        "name": "Sánchez",
+        "_id": "11803"
+    },
+    {
+        "idCanton": "118",
+        "name": "Tirrases",
+        "_id": "11804"
+    },
+    {
+        "idCanton": "119",
+        "name": "San Isidro de El General",
+        "_id": "11901"
+    },
+    {
+        "idCanton": "119",
+        "name": "General",
+        "_id": "11902"
+    },
+    {
+        "idCanton": "119",
+        "name": "Daniel Flores",
+        "_id": "11903"
+    },
+    {
+        "idCanton": "119",
+        "name": "Rivas",
+        "_id": "11904"
+    },
+    {
+        "idCanton": "119",
+        "name": "San Pedro",
+        "_id": "11905"
+    },
+    {
+        "idCanton": "119",
+        "name": "Platanares",
+        "_id": "11906"
+    },
+    {
+        "idCanton": "119",
+        "name": "Pejibaye",
+        "_id": "11907"
+    },
+    {
+        "idCanton": "119",
+        "name": "Cajón",
+        "_id": "11908"
+    },
+    {
+        "idCanton": "119",
+        "name": "Barú",
+        "_id": "11909"
+    },
+    {
+        "idCanton": "119",
+        "name": "Río Nuevo",
+        "_id": "11910"
+    },
+    {
+        "idCanton": "119",
+        "name": "Páramo",
+        "_id": "11911"
+    },
+    {
+        "idCanton": "120",
+        "name": "San Pablo",
+        "_id": "12001"
+    },
+    {
+        "idCanton": "120",
+        "name": "San Andrés",
+        "_id": "12002"
+    },
+    {
+        "idCanton": "120",
+        "name": "Llano Bonito",
+        "_id": "12003"
+    },
+    {
+        "idCanton": "120",
+        "name": "San Isidro",
+        "_id": "12004"
+    },
+    {
+        "idCanton": "120",
+        "name": "Santa Cruz",
+        "_id": "12005"
+    },
+    {
+        "idCanton": "120",
+        "name": "San Antonio",
+        "_id": "12005"
+    },
+    {
+        "idCanton": "201",
+        "name": "Alajuela",
+        "_id": "20101"
+    },
+    {
+        "idCanton": "201",
+        "name": "San José",
+        "_id": "20102"
+    },
+    {
+        "idCanton": "201",
+        "name": "Carrizal",
+        "_id": "20103"
+    },
+    {
+        "idCanton": "201",
+        "name": "San Antonio",
+        "_id": "20104"
+    },
+    {
+        "idCanton": "201",
+        "name": "Guácima",
+        "_id": "20105"
+    },
+    {
+        "idCanton": "201",
+        "name": "San Isidro",
+        "_id": "20106"
+    },
+    {
+        "idCanton": "201",
+        "name": "Sabanilla",
+        "_id": "20107"
+    },
+    {
+        "idCanton": "201",
+        "name": "San Rafael",
+        "_id": "20108"
+    },
+    {
+        "idCanton": "201",
+        "name": "Río Segundo",
+        "_id": "20109"
+    },
+    {
+        "idCanton": "201",
+        "name": "Desamparados",
+        "_id": "20110"
+    },
+    {
+        "idCanton": "201",
+        "name": "Turrúcares",
+        "_id": "20111"
+    },
+    {
+        "idCanton": "201",
+        "name": "Tambor",
+        "_id": "20112"
+    },
+    {
+        "idCanton": "201",
+        "name": "Garita",
+        "_id": "20113"
+    },
+    {
+        "idCanton": "201",
+        "name": "Sarapiquí",
+        "_id": "20114"
+    },
+    {
+        "idCanton": "202",
+        "name": "San Ramón",
+        "_id": "20201"
+    },
+    {
+        "idCanton": "202",
+        "name": "Santiago",
+        "_id": "20202"
+    },
+    {
+        "idCanton": "202",
+        "name": "San Juan",
+        "_id": "20203"
+    },
+    {
+        "idCanton": "202",
+        "name": "Piedades Norte",
+        "_id": "20204"
+    },
+    {
+        "idCanton": "202",
+        "name": "Piedades Sur",
+        "_id": "20205"
+    },
+    {
+        "idCanton": "202",
+        "name": "San Rafael",
+        "_id": "20206"
+    },
+    {
+        "idCanton": "202",
+        "name": "San Isidro",
+        "_id": "20207"
+    },
+    {
+        "idCanton": "202",
+        "name": "Los Ángeles",
+        "_id": "20208"
+    },
+    {
+        "idCanton": "202",
+        "name": "Alfaro",
+        "_id": "20209"
+    },
+    {
+        "idCanton": "202",
+        "name": "Volio",
+        "_id": "20210"
+    },
+    {
+        "idCanton": "202",
+        "name": "Concepción",
+        "_id": "20211"
+    },
+    {
+        "idCanton": "202",
+        "name": "Zapotal",
+        "_id": "20212"
+    },
+    {
+        "idCanton": "202",
+        "name": "Peñas Blancas",
+        "_id": "20213"
+    },
+    {
+        "idCanton": "203",
+        "name": "Grecia",
+        "_id": "20301"
+    },
+    {
+        "idCanton": "203",
+        "name": "San Isidro",
+        "_id": "20302"
+    },
+    {
+        "idCanton": "203",
+        "name": "San José",
+        "_id": "20303"
+    },
+    {
+        "idCanton": "203",
+        "name": "San Roque",
+        "_id": "20304"
+    },
+    {
+        "idCanton": "203",
+        "name": "Tacares",
+        "_id": "20305"
+    },
+    {
+        "idCanton": "203",
+        "name": "Río Cuarto",
+        "_id": "20306"
+    },
+    {
+        "idCanton": "203",
+        "name": "Puente de Piedra",
+        "_id": "20307"
+    },
+    {
+        "idCanton": "203",
+        "name": "Bolívar",
+        "_id": "20308"
+    },
+    {
+        "idCanton": "204",
+        "name": "San Mateo",
+        "_id": "20501"
+    },
+    {
+        "idCanton": "204",
+        "name": "Desmonte",
+        "_id": "20502"
+    },
+    {
+        "idCanton": "204",
+        "name": "Jesús María",
+        "_id": "20503"
+    },
+    {
+        "idCanton": "205",
+        "name": "Atenas",
+        "_id": "20504"
+    },
+    {
+        "idCanton": "205",
+        "name": "Jesús",
+        "_id": "20505"
+    },
+    {
+        "idCanton": "205",
+        "name": "Mercedes",
+        "_id": "20506"
+    },
+    {
+        "idCanton": "205",
+        "name": "San Isidro",
+        "_id": "20507"
+    },
+    {
+        "idCanton": "205",
+        "name": "Concepción",
+        "_id": "20508"
+    },
+    {
+        "idCanton": "205",
+        "name": "San José",
+        "_id": "20509"
+    },
+    {
+        "idCanton": "205",
+        "name": "Santa Eulalia",
+        "_id": "20510"
+    },
+    {
+        "idCanton": "205",
+        "name": "Escobal",
+        "_id": "20511"
+    },
+    {
+        "idCanton": "206",
+        "name": "Naranjo",
+        "_id": "20601"
+    },
+    {
+        "idCanton": "206",
+        "name": "San Miguel",
+        "_id": "20602"
+    },
+    {
+        "idCanton": "206",
+        "name": "San José",
+        "_id": "20603"
+    },
+    {
+        "idCanton": "206",
+        "name": "Cirrí Sur",
+        "_id": "20604"
+    },
+    {
+        "idCanton": "206",
+        "name": "San Jerónimo",
+        "_id": "20605"
+    },
+    {
+        "idCanton": "206",
+        "name": "San Juan",
+        "_id": "20606"
+    },
+    {
+        "idCanton": "206",
+        "name": "El Rosario",
+        "_id": "20607"
+    },
+    {
+        "idCanton": "206",
+        "name": "Palmitos",
+        "_id": "2068"
+    },
+    {
+        "idCanton": "207",
+        "name": "Palmares",
+        "_id": "20701"
+    },
+    {
+        "idCanton": "207",
+        "name": "Zaragoza",
+        "_id": "20702"
+    },
+    {
+        "idCanton": "207",
+        "name": "Buenos Aires",
+        "_id": "20703"
+    },
+    {
+        "idCanton": "207",
+        "name": "Santiago",
+        "_id": "20704"
+    },
+    {
+        "idCanton": "207",
+        "name": "Candelaria",
+        "_id": "20705"
+    },
+    {
+        "idCanton": "207",
+        "name": "Esquipulas",
+        "_id": "20706"
+    },
+    {
+        "idCanton": "207",
+        "name": "La Granja",
+        "_id": "20707"
+    },
+    {
+        "idCanton": "208",
+        "name": "San Pedro",
+        "_id": "20801"
+    },
+    {
+        "idCanton": "208",
+        "name": "San Juan",
+        "_id": "20802"
+    },
+    {
+        "idCanton": "208",
+        "name": "San Rafael",
+        "_id": "20803"
+    },
+    {
+        "idCanton": "208",
+        "name": "Carrillos",
+        "_id": "20804"
+    },
+    {
+        "idCanton": "208",
+        "name": "Sabana Redonda",
+        "_id": "20805"
+    },
+    {
+        "idCanton": "209",
+        "name": "Orotina",
+        "_id": "20901"
+    },
+    {
+        "idCanton": "209",
+        "name": "El Mastate",
+        "_id": "20902"
+    },
+    {
+        "idCanton": "209",
+        "name": "Hacienda Vieja",
+        "_id": "20903"
+    },
+    {
+        "idCanton": "209",
+        "name": "Coyolar",
+        "_id": "20904"
+    },
+    {
+        "idCanton": "209",
+        "name": "La Ceiba",
+        "_id": "20905"
+    },
+    {
+        "idCanton": "210",
+        "name": "Quesada",
+        "_id": "21001"
+    },
+    {
+        "idCanton": "210",
+        "name": "Florencia",
+        "_id": "21002"
+    },
+    {
+        "idCanton": "210",
+        "name": "Buenavista",
+        "_id": "21003"
+    },
+    {
+        "idCanton": "210",
+        "name": "Aguas Zarcas",
+        "_id": "21004"
+    },
+    {
+        "idCanton": "210",
+        "name": "Venecia",
+        "_id": "21005"
+    },
+    {
+        "idCanton": "210",
+        "name": "Pital",
+        "_id": "21006"
+    },
+    {
+        "idCanton": "210",
+        "name": "La Fortuna",
+        "_id": "21007"
+    },
+    {
+        "idCanton": "210",
+        "name": "La Tigra",
+        "_id": "21008"
+    },
+    {
+        "idCanton": "210",
+        "name": "La Palmera",
+        "_id": "21009"
+    },
+    {
+        "idCanton": "210",
+        "name": "Venado",
+        "_id": "21010"
+    },
+    {
+        "idCanton": "210",
+        "name": "Cutris",
+        "_id": "21011"
+    },
+    {
+        "idCanton": "210",
+        "name": "Monterrey",
+        "_id": "21012"
+    },
+    {
+        "idCanton": "210",
+        "name": "Pocosol",
+        "_id": "21013"
+    },
+    {
+        "idCanton": "211",
+        "name": "Zarcero",
+        "_id": "21101"
+    },
+    {
+        "idCanton": "211",
+        "name": "Laguna",
+        "_id": "21102"
+    },
+    {
+        "idCanton": "211",
+        "name": "Tapesco",
+        "_id": "21103"
+    },
+    {
+        "idCanton": "211",
+        "name": "Guadalupe",
+        "_id": "21104"
+    },
+    {
+        "idCanton": "211",
+        "name": "Palmira",
+        "_id": "21105"
+    },
+    {
+        "idCanton": "211",
+        "name": "Zapote",
+        "_id": "21106"
+    },
+    {
+        "idCanton": "211",
+        "name": "Brisas",
+        "_id": "21107"
+    },
+    {
+        "idCanton": "212",
+        "name": "Sarchí Norte",
+        "_id": "21201"
+    },
+    {
+        "idCanton": "212",
+        "name": "Sarchí Sur",
+        "_id": "21202"
+    },
+    {
+        "idCanton": "212",
+        "name": "Toro Amarillo",
+        "_id": "21203"
+    },
+    {
+        "idCanton": "212",
+        "name": "San Pedro",
+        "_id": "21204"
+    },
+    {
+        "idCanton": "212",
+        "name": "Rodríguez",
+        "_id": "21205"
+    },
+    {
+        "idCanton": "213",
+        "name": "Upala",
+        "_id": "21301"
+    },
+    {
+        "idCanton": "213",
+        "name": "Aguas Claras",
+        "_id": "21302"
+    },
+    {
+        "idCanton": "213",
+        "name": "San José (Pizote)",
+        "_id": "21303"
+    },
+    {
+        "idCanton": "213",
+        "name": "Bijagua",
+        "_id": "21304"
+    },
+    {
+        "idCanton": "213",
+        "name": "Delicias",
+        "_id": "21305"
+    },
+    {
+        "idCanton": "213",
+        "name": "Dos Ríos",
+        "_id": "21306"
+    },
+    {
+        "idCanton": "213",
+        "name": "Yoliyllal",
+        "_id": "21307"
+    },
+    {
+        "idCanton": "214",
+        "name": "Los Chiles",
+        "_id": "21401"
+    },
+    {
+        "idCanton": "214",
+        "name": "Caño Negro",
+        "_id": "21402"
+    },
+    {
+        "idCanton": "214",
+        "name": "El Amparo",
+        "_id": "21403"
+    },
+    {
+        "idCanton": "214",
+        "name": "San Jorge",
+        "_id": "21404"
+    },
+    {
+        "idCanton": "215",
+        "name": "San Rafael",
+        "_id": "21501"
+    },
+    {
+        "idCanton": "215",
+        "name": "Buenavista",
+        "_id": "21502"
+    },
+    {
+        "idCanton": "215",
+        "name": "Cote",
+        "_id": "21503"
+    },
+    {
+        "idCanton": "215",
+        "name": "Katira",
+        "_id": "21504"
+    },
+    {
+        "idCanton": "301",
+        "name": "Oriental",
+        "_id": "30101"
+    },
+    {
+        "idCanton": "301",
+        "name": "Occidental",
+        "_id": "30102"
+    },
+    {
+        "idCanton": "301",
+        "name": "Carmen",
+        "_id": "30103"
+    },
+    {
+        "idCanton": "301",
+        "name": "San Nicolás",
+        "_id": "30104"
+    },
+    {
+        "idCanton": "301",
+        "name": "Aguacaliente (San Francisco)",
+        "_id": "30105"
+    },
+    {
+        "idCanton": "301",
+        "name": "Guadalupe (Arenilla)",
+        "_id": "30106"
+    },
+    {
+        "idCanton": "301",
+        "name": "Corralillo",
+        "_id": "30107"
+    },
+    {
+        "idCanton": "301",
+        "name": "Tierra Blanca",
+        "_id": "30108"
+    },
+    {
+        "idCanton": "301",
+        "name": "Dulce Nombre",
+        "_id": "30109"
+    },
+    {
+        "idCanton": "301",
+        "name": "Llano Grande",
+        "_id": "30110"
+    },
+    {
+        "idCanton": "301",
+        "name": "Quebradilla",
+        "_id": "30111"
+    },
+    {
+        "idCanton": "302",
+        "name": "Paraíso",
+        "_id": "30201"
+    },
+    {
+        "idCanton": "302",
+        "name": "Santiago",
+        "_id": "30202"
+    },
+    {
+        "idCanton": "302",
+        "name": "Orosi",
+        "_id": "30203"
+    },
+    {
+        "idCanton": "302",
+        "name": "Cachí",
+        "_id": "30204"
+    },
+    {
+        "idCanton": "302",
+        "name": "Llanos de Santa Lucía",
+        "_id": "30205"
+    },
+    {
+        "idCanton": "303",
+        "name": "Tres Ríos",
+        "_id": "30301"
+    },
+    {
+        "idCanton": "303",
+        "name": "San Diego",
+        "_id": "30302"
+    },
+    {
+        "idCanton": "303",
+        "name": "San Juan",
+        "_id": "30303"
+    },
+    {
+        "idCanton": "303",
+        "name": "San Rafael",
+        "_id": "30304"
+    },
+    {
+        "idCanton": "303",
+        "name": "Concepción",
+        "_id": "30305"
+    },
+    {
+        "idCanton": "303",
+        "name": "Dulce Nombre",
+        "_id": "30306"
+    },
+    {
+        "idCanton": "303",
+        "name": "San Ramón",
+        "_id": "30307"
+    },
+    {
+        "idCanton": "303",
+        "name": "Río Azul",
+        "_id": "30308"
+    },
+    {
+        "idCanton": "304",
+        "name": "Juan Viñas",
+        "_id": "30401"
+    },
+    {
+        "idCanton": "304",
+        "name": "Tucurrique",
+        "_id": "30402"
+    },
+    {
+        "idCanton": "304",
+        "name": "Pejibaye",
+        "_id": "30403"
+    },
+    {
+        "idCanton": "305",
+        "name": "Turrialba",
+        "_id": "30501"
+    },
+    {
+        "idCanton": "305",
+        "name": "La Suiza",
+        "_id": "30502"
+    },
+    {
+        "idCanton": "305",
+        "name": "Peralta",
+        "_id": "30503"
+    },
+    {
+        "idCanton": "305",
+        "name": "Santa Cruz",
+        "_id": "30504"
+    },
+    {
+        "idCanton": "305",
+        "name": "Santa Teresita",
+        "_id": "30505"
+    },
+    {
+        "idCanton": "305",
+        "name": "Pavones",
+        "_id": "30506"
+    },
+    {
+        "idCanton": "305",
+        "name": "Tuis",
+        "_id": "30507"
+    },
+    {
+        "idCanton": "305",
+        "name": "Tayutic",
+        "_id": "30508"
+    },
+    {
+        "idCanton": "305",
+        "name": "Santa Rosa",
+        "_id": "30509"
+    },
+    {
+        "idCanton": "305",
+        "name": "Tres Equis",
+        "_id": "30510"
+    },
+    {
+        "idCanton": "305",
+        "name": "La Isabel",
+        "_id": "30511"
+    },
+    {
+        "idCanton": "305",
+        "name": "Chirripó",
+        "_id": "30512"
+    },
+    {
+        "idCanton": "306",
+        "name": "Pacayas",
+        "_id": "30601"
+    },
+    {
+        "idCanton": "306",
+        "name": "Cervantes",
+        "_id": "30602"
+    },
+    {
+        "idCanton": "306",
+        "name": "Capellades",
+        "_id": "30603"
+    },
+    {
+        "idCanton": "307",
+        "name": "San Rafael",
+        "_id": "30701"
+    },
+    {
+        "idCanton": "307",
+        "name": "Cot",
+        "_id": "30702"
+    },
+    {
+        "idCanton": "307",
+        "name": "Potrero Cerrado",
+        "_id": "30703"
+    },
+    {
+        "idCanton": "307",
+        "name": "Cipreses",
+        "_id": "30704"
+    },
+    {
+        "idCanton": "307",
+        "name": "Santa Rosa",
+        "_id": "30705"
+    },
+    {
+        "idCanton": "308",
+        "name": "El Tejar",
+        "_id": "30801"
+    },
+    {
+        "idCanton": "308",
+        "name": "San Isidro",
+        "_id": "30802"
+    },
+    {
+        "idCanton": "308",
+        "name": "Tobosi",
+        "_id": "30803"
+    },
+    {
+        "idCanton": "308",
+        "name": "Patio de Agua",
+        "_id": "30804"
+    },
+    {
+        "idCanton": "401",
+        "name": "Heredia",
+        "_id": "40101"
+    },
+    {
+        "idCanton": "401",
+        "name": "Mercedes",
+        "_id": "40102"
+    },
+    {
+        "idCanton": "401",
+        "name": "San Francisco",
+        "_id": "40103"
+    },
+    {
+        "idCanton": "401",
+        "name": "Ulloa",
+        "_id": "40104"
+    },
+    {
+        "idCanton": "401",
+        "name": "Varablanca",
+        "_id": "40105"
+    },
+    {
+        "idCanton": "402",
+        "name": "Barva",
+        "_id": "40201"
+    },
+    {
+        "idCanton": "402",
+        "name": "San Pedro",
+        "_id": "40202"
+    },
+    {
+        "idCanton": "402",
+        "name": "San Pablo",
+        "_id": "40203"
+    },
+    {
+        "idCanton": "402",
+        "name": "San Roque",
+        "_id": "40204"
+    },
+    {
+        "idCanton": "402",
+        "name": "Santa Lucía",
+        "_id": "40205"
+    },
+    {
+        "idCanton": "402",
+        "name": "San José de la Montaña",
+        "_id": "40206"
+    },
+    {
+        "idCanton": "403",
+        "name": "Santo Domingo",
+        "_id": "40301"
+    },
+    {
+        "idCanton": "403",
+        "name": "San Vicente",
+        "_id": "40302"
+    },
+    {
+        "idCanton": "403",
+        "name": "San Miguel",
+        "_id": "40303"
+    },
+    {
+        "idCanton": "403",
+        "name": "Paracito",
+        "_id": "40304"
+    },
+    {
+        "idCanton": "403",
+        "name": "Santo Tomás",
+        "_id": "40305"
+    },
+    {
+        "idCanton": "403",
+        "name": "Santa Rosa",
+        "_id": "40306"
+    },
+    {
+        "idCanton": "403",
+        "name": "Tures",
+        "_id": "40307"
+    },
+    {
+        "idCanton": "403",
+        "name": "Para",
+        "_id": "40308"
+    },
+    {
+        "idCanton": "404",
+        "name": "Santa Bárbara",
+        "_id": "40401"
+    },
+    {
+        "idCanton": "404",
+        "name": "San Pedro",
+        "_id": "40402"
+    },
+    {
+        "idCanton": "404",
+        "name": "San Juan",
+        "_id": "40403"
+    },
+    {
+        "idCanton": "404",
+        "name": "Jesús",
+        "_id": "40404"
+    },
+    {
+        "idCanton": "404",
+        "name": "Santo Domingo",
+        "_id": "40405"
+    },
+    {
+        "idCanton": "404",
+        "name": "Puraba",
+        "_id": "40406"
+    },
+    {
+        "idCanton": "405",
+        "name": "San Rafael",
+        "_id": "40501"
+    },
+    {
+        "idCanton": "405",
+        "name": "San Josécito",
+        "_id": "40502"
+    },
+    {
+        "idCanton": "405",
+        "name": "Santiago",
+        "_id": "40503"
+    },
+    {
+        "idCanton": "405",
+        "name": "Los Ángeles",
+        "_id": "40504"
+    },
+    {
+        "idCanton": "405",
+        "name": "Concepción",
+        "_id": "40505"
+    },
+    {
+        "idCanton": "406",
+        "name": "San Isidro",
+        "_id": "40601"
+    },
+    {
+        "idCanton": "406",
+        "name": "San José",
+        "_id": "40602"
+    },
+    {
+        "idCanton": "406",
+        "name": "Concepción",
+        "_id": "40603"
+    },
+    {
+        "idCanton": "406",
+        "name": "San Francisco",
+        "_id": "40604"
+    },
+    {
+        "idCanton": "407",
+        "name": "San Antonio",
+        "_id": "40701"
+    },
+    {
+        "idCanton": "407",
+        "name": "La Ribera",
+        "_id": "40702"
+    },
+    {
+        "idCanton": "407",
+        "name": "La Asunción",
+        "_id": "40703"
+    },
+    {
+        "idCanton": "408",
+        "name": "San Joaquín de Flores",
+        "_id": "40801"
+    },
+    {
+        "idCanton": "408",
+        "name": "Barrantes",
+        "_id": "40802"
+    },
+    {
+        "idCanton": "408",
+        "name": "Llorente",
+        "_id": "40803"
+    },
+    {
+        "idCanton": "409",
+        "name": "San Pablo",
+        "_id": "40901"
+    },
+    {
+        "idCanton": "409",
+        "name": "Rincón de Sabanilla",
+        "_id": "40902"
+    },
+    {
+        "idCanton": "410",
+        "name": "Puerto Viejo",
+        "_id": "41001"
+    },
+    {
+        "idCanton": "410",
+        "name": "La Virgen",
+        "_id": "41002"
+    },
+    {
+        "idCanton": "410",
+        "name": "Horquetas",
+        "_id": "41003"
+    },
+    {
+        "idCanton": "410",
+        "name": "Llanuras del Gaspar",
+        "_id": "41004"
+    },
+    {
+        "idCanton": "410",
+        "name": "Cureña",
+        "_id": "41005"
+    },
+    {
+        "idCanton": "501",
+        "name": "Liberia",
+        "_id": "50101"
+    },
+    {
+        "idCanton": "501",
+        "name": "Cañas Dulces",
+        "_id": "50102"
+    },
+    {
+        "idCanton": "501",
+        "name": "Mayorga",
+        "_id": "50103"
+    },
+    {
+        "idCanton": "501",
+        "name": "Nacascolo",
+        "_id": "50104"
+    },
+    {
+        "idCanton": "501",
+        "name": "Curubande",
+        "_id": "50105"
+    },
+    {
+        "idCanton": "502",
+        "name": "Nicoya",
+        "_id": "50201"
+    },
+    {
+        "idCanton": "502",
+        "name": "Mansion",
+        "_id": "50202"
+    },
+    {
+        "idCanton": "502",
+        "name": "San Antonio",
+        "_id": "50203"
+    },
+    {
+        "idCanton": "502",
+        "name": "Quebrada Honda",
+        "_id": "50204"
+    },
+    {
+        "idCanton": "502",
+        "name": "Samara",
+        "_id": "50205"
+    },
+    {
+        "idCanton": "502",
+        "name": "Nosara",
+        "_id": "50206"
+    },
+    {
+        "idCanton": "502",
+        "name": "Belén de Nosarita",
+        "_id": "50207"
+    },
+    {
+        "idCanton": "503",
+        "name": "Santa Cruz",
+        "_id": "50301"
+    },
+    {
+        "idCanton": "503",
+        "name": "Bolson",
+        "_id": "50302"
+    },
+    {
+        "idCanton": "503",
+        "name": "Veintisiete de Abril",
+        "_id": "50303"
+    },
+    {
+        "idCanton": "503",
+        "name": "Tempate",
+        "_id": "50304"
+    },
+    {
+        "idCanton": "503",
+        "name": "Cartagena",
+        "_id": "50305"
+    },
+    {
+        "idCanton": "503",
+        "name": "Cuajiniquil",
+        "_id": "50306"
+    },
+    {
+        "idCanton": "503",
+        "name": "Diria",
+        "_id": "50307"
+    },
+    {
+        "idCanton": "503",
+        "name": "Cabo Velas",
+        "_id": "50308"
+    },
+    {
+        "idCanton": "503",
+        "name": "Tamarindo",
+        "_id": "50309"
+    },
+    {
+        "idCanton": "504",
+        "name": "Bagaces",
+        "_id": "50401"
+    },
+    {
+        "idCanton": "504",
+        "name": "Fortuna",
+        "_id": "50402"
+    },
+    {
+        "idCanton": "504",
+        "name": "Mogote",
+        "_id": "50403"
+    },
+    {
+        "idCanton": "504",
+        "name": "Río Naranjo",
+        "_id": "50404"
+    },
+    {
+        "idCanton": "505",
+        "name": "Filadelfia",
+        "_id": "50501"
+    },
+    {
+        "idCanton": "505",
+        "name": "Palmira",
+        "_id": "50502"
+    },
+    {
+        "idCanton": "505",
+        "name": "Sardinal",
+        "_id": "50503"
+    },
+    {
+        "idCanton": "505",
+        "name": "Belén",
+        "_id": "50504"
+    },
+    {
+        "idCanton": "506",
+        "name": "Cañas",
+        "_id": "50601"
+    },
+    {
+        "idCanton": "506",
+        "name": "Palmira",
+        "_id": "50602"
+    },
+    {
+        "idCanton": "506",
+        "name": "San Miguel",
+        "_id": "50603"
+    },
+    {
+        "idCanton": "506",
+        "name": "Bebedero",
+        "_id": "50604"
+    },
+    {
+        "idCanton": "506",
+        "name": "Porozal",
+        "_id": "50605"
+    },
+    {
+        "idCanton": "507",
+        "name": "Juntas",
+        "_id": "50701"
+    },
+    {
+        "idCanton": "507",
+        "name": "Sierra",
+        "_id": "50702"
+    },
+    {
+        "idCanton": "507",
+        "name": "San Juan",
+        "_id": "50703"
+    },
+    {
+        "idCanton": "507",
+        "name": "Colorado",
+        "_id": "50704"
+    },
+    {
+        "idCanton": "508",
+        "name": "Tilarán",
+        "_id": "50801"
+    },
+    {
+        "idCanton": "508",
+        "name": "Quebrada Grande",
+        "_id": "50802"
+    },
+    {
+        "idCanton": "508",
+        "name": "Tronadora",
+        "_id": "50803"
+    },
+    {
+        "idCanton": "508",
+        "name": "Santa Rosa",
+        "_id": "50804"
+    },
+    {
+        "idCanton": "508",
+        "name": "Líbano",
+        "_id": "50805"
+    },
+    {
+        "idCanton": "508",
+        "name": "Tierras Morenas",
+        "_id": "50806"
+    },
+    {
+        "idCanton": "508",
+        "name": "Arenal",
+        "_id": "50807"
+    },
+    {
+        "idCanton": "509",
+        "name": "Carmona",
+        "_id": "50901"
+    },
+    {
+        "idCanton": "509",
+        "name": "Santa Rita",
+        "_id": "50902"
+    },
+    {
+        "idCanton": "509",
+        "name": "Zapotal",
+        "_id": "50903"
+    },
+    {
+        "idCanton": "509",
+        "name": "San Pablo",
+        "_id": "50904"
+    },
+    {
+        "idCanton": "509",
+        "name": "Porvenir",
+        "_id": "50905"
+    },
+    {
+        "idCanton": "509",
+        "name": "Bejuco",
+        "_id": "50906"
+    },
+    {
+        "idCanton": "510",
+        "name": "La Cruz",
+        "_id": "51001"
+    },
+    {
+        "idCanton": "510",
+        "name": "Santa Cecilia",
+        "_id": "51002"
+    },
+    {
+        "idCanton": "510",
+        "name": "Garita",
+        "_id": "51003"
+    },
+    {
+        "idCanton": "510",
+        "name": "Santa Elena",
+        "_id": "5100"
+    },
+    {
+        "idCanton": "511",
+        "name": "Hojancha",
+        "_id": "51101"
+    },
+    {
+        "idCanton": "511",
+        "name": "Monte Romo",
+        "_id": "51102"
+    },
+    {
+        "idCanton": "511",
+        "name": "Puerto Carrillo",
+        "_id": "51103"
+    },
+    {
+        "idCanton": "511",
+        "name": "Huacas",
+        "_id": "51104"
+    },
+    {
+        "idCanton": "601",
+        "name": "Puntarenas",
+        "_id": "60101"
+    },
+    {
+        "idCanton": "601",
+        "name": "Pitahaya",
+        "_id": "60102"
+    },
+    {
+        "idCanton": "601",
+        "name": "Chomes",
+        "_id": "60103"
+    },
+    {
+        "idCanton": "601",
+        "name": "Lepanto",
+        "_id": "60104"
+    },
+    {
+        "idCanton": "601",
+        "name": "Paquera",
+        "_id": "60105"
+    },
+    {
+        "idCanton": "601",
+        "name": "Manzanillo",
+        "_id": "60106"
+    },
+    {
+        "idCanton": "601",
+        "name": "Guacimal",
+        "_id": "60107"
+    },
+    {
+        "idCanton": "601",
+        "name": "Barranca",
+        "_id": "60108"
+    },
+    {
+        "idCanton": "601",
+        "name": "Monte Verde",
+        "_id": "60109"
+    },
+    {
+        "idCanton": "601",
+        "name": "Isla del Coco",
+        "_id": "60110"
+    },
+    {
+        "idCanton": "601",
+        "name": "Cobano",
+        "_id": "60111"
+    },
+    {
+        "idCanton": "601",
+        "name": "Chacarita",
+        "_id": "60112"
+    },
+    {
+        "idCanton": "601",
+        "name": "Chira",
+        "_id": "60113"
+    },
+    {
+        "idCanton": "601",
+        "name": "Acapulco",
+        "_id": "60114"
+    },
+    {
+        "idCanton": "601",
+        "name": "El Roble",
+        "_id": "60115"
+    },
+    {
+        "idCanton": "601",
+        "name": "Arancibia",
+        "_id": "60116"
+    },
+    {
+        "idCanton": "602",
+        "name": "Espiritu Santo",
+        "_id": "60201"
+    },
+    {
+        "idCanton": "602",
+        "name": "San Juan Grande",
+        "_id": "60202"
+    },
+    {
+        "idCanton": "602",
+        "name": "Macacona",
+        "_id": "60203"
+    },
+    {
+        "idCanton": "602",
+        "name": "San Rafael",
+        "_id": "60204"
+    },
+    {
+        "idCanton": "602",
+        "name": "San Jerónimo",
+        "_id": "60205"
+    },
+    {
+        "idCanton": "603",
+        "name": "Buenos Aires",
+        "_id": "60301"
+    },
+    {
+        "idCanton": "603",
+        "name": "Volcan",
+        "_id": "60302"
+    },
+    {
+        "idCanton": "603",
+        "name": "Potrero Grande",
+        "_id": "60303"
+    },
+    {
+        "idCanton": "603",
+        "name": "Boruca",
+        "_id": "60304"
+    },
+    {
+        "idCanton": "603",
+        "name": "Pilas",
+        "_id": "60305"
+    },
+    {
+        "idCanton": "603",
+        "name": "Colinas",
+        "_id": "60306"
+    },
+    {
+        "idCanton": "603",
+        "name": "Changena",
+        "_id": "60307"
+    },
+    {
+        "idCanton": "603",
+        "name": "Briolley",
+        "_id": "60308"
+    },
+    {
+        "idCanton": "603",
+        "name": "Brunka",
+        "_id": "60309"
+    },
+    {
+        "idCanton": "604",
+        "name": "Miramar",
+        "_id": "60401"
+    },
+    {
+        "idCanton": "604",
+        "name": "La Unión",
+        "_id": "60402"
+    },
+    {
+        "idCanton": "604",
+        "name": "San Isidro",
+        "_id": "60403"
+    },
+    {
+        "idCanton": "605",
+        "name": "Puerto Cortes",
+        "_id": "60501"
+    },
+    {
+        "idCanton": "605",
+        "name": "Palmar",
+        "_id": "60502"
+    },
+    {
+        "idCanton": "605",
+        "name": "Sierpe",
+        "_id": "60503"
+    },
+    {
+        "idCanton": "605",
+        "name": "Bahia Ballena",
+        "_id": "60504"
+    },
+    {
+        "idCanton": "605",
+        "name": "Piedras Blancas",
+        "_id": "60505"
+    },
+    {
+        "idCanton": "606",
+        "name": "Quepos",
+        "_id": "60601"
+    },
+    {
+        "idCanton": "606",
+        "name": "Savegre",
+        "_id": "60602"
+    },
+    {
+        "idCanton": "606",
+        "name": "Naranjito",
+        "_id": "60603"
+    },
+    {
+        "idCanton": "607",
+        "name": "Golfito",
+        "_id": "60701"
+    },
+    {
+        "idCanton": "607",
+        "name": "Puerto Jiménez",
+        "_id": "60702"
+    },
+    {
+        "idCanton": "607",
+        "name": "Guaycara",
+        "_id": "60703"
+    },
+    {
+        "idCanton": "607",
+        "name": "Pavon",
+        "_id": "60704"
+    },
+    {
+        "idCanton": "608",
+        "name": "San Vito",
+        "_id": "60801"
+    },
+    {
+        "idCanton": "608",
+        "name": "Sabalito",
+        "_id": "60802"
+    },
+    {
+        "idCanton": "608",
+        "name": "Aguabuena",
+        "_id": "60803"
+    },
+    {
+        "idCanton": "608",
+        "name": "Limóncito",
+        "_id": "60804"
+    },
+    {
+        "idCanton": "608",
+        "name": "Pittier",
+        "_id": "60805"
+    },
+    {
+        "idCanton": "609",
+        "name": "Parrita",
+        "_id": "60901"
+    },
+    {
+        "idCanton": "610",
+        "name": "Corredor",
+        "_id": "61001"
+    },
+    {
+        "idCanton": "610",
+        "name": "La Cuesta",
+        "_id": "61002"
+    },
+    {
+        "idCanton": "610",
+        "name": "Canoas",
+        "_id": "61003"
+    },
+    {
+        "idCanton": "610",
+        "name": "Laurel",
+        "_id": "61004"
+    },
+    {
+        "idCanton": "611",
+        "name": "Jacó",
+        "_id": "61101"
+    },
+    {
+        "idCanton": "611",
+        "name": "Tarcoles",
+        "_id": "61102"
+    },
+    {
+        "idCanton": "701",
+        "name": "Limón",
+        "_id": "70101"
+    },
+    {
+        "idCanton": "701",
+        "name": "Valle La Estrella",
+        "_id": "70102"
+    },
+    {
+        "idCanton": "701",
+        "name": "Río Blanco",
+        "_id": "70103"
+    },
+    {
+        "idCanton": "701",
+        "name": "Matama",
+        "_id": "70104"
+    },
+    {
+        "idCanton": "702",
+        "name": "Guapiles",
+        "_id": "70201"
+    },
+    {
+        "idCanton": "702",
+        "name": "Jiménez",
+        "_id": "70202"
+    },
+    {
+        "idCanton": "702",
+        "name": "Rita",
+        "_id": "70203"
+    },
+    {
+        "idCanton": "702",
+        "name": "Roxana",
+        "_id": "70204"
+    },
+    {
+        "idCanton": "702",
+        "name": "Cariari",
+        "_id": "70205"
+    },
+    {
+        "idCanton": "702",
+        "name": "Colorado",
+        "_id": "70206"
+    },
+    {
+        "idCanton": "703",
+        "name": "Siquirres",
+        "_id": "70301"
+    },
+    {
+        "idCanton": "703",
+        "name": "Pacuarito",
+        "_id": "70302"
+    },
+    {
+        "idCanton": "703",
+        "name": "Florida",
+        "_id": "70303"
+    },
+    {
+        "idCanton": "703",
+        "name": "Germania",
+        "_id": "70304"
+    },
+    {
+        "idCanton": "703",
+        "name": "Cairo",
+        "_id": "70305"
+    },
+    {
+        "idCanton": "703",
+        "name": "Alegria",
+        "_id": "70306"
+    },
+    {
+        "idCanton": "704",
+        "name": "Bratsi",
+        "_id": "70401"
+    },
+    {
+        "idCanton": "704",
+        "name": "Sixaola",
+        "_id": "70402"
+    },
+    {
+        "idCanton": "704",
+        "name": "Cahuita",
+        "_id": "70403"
+    },
+    {
+        "idCanton": "704",
+        "name": "Telire",
+        "_id": "70404"
+    },
+    {
+        "idCanton": "705",
+        "name": "Matina",
+        "_id": "70501"
+    },
+    {
+        "idCanton": "705",
+        "name": "Battan",
+        "_id": "70502"
+    },
+    {
+        "idCanton": "705",
+        "name": "Carrandi",
+        "_id": "70503"
+    },
+    {
+        "idCanton": "706",
+        "name": "Guácimo",
+        "_id": "70601"
+    },
+    {
+        "idCanton": "706",
+        "name": "Mercedes",
+        "_id": "70602"
+    },
+    {
+        "idCanton": "706",
+        "name": "Pocora",
+        "_id": "70603"
+    },
+    {
+        "idCanton": "706",
+        "name": "Río Jiménez",
+        "_id": "70604"
+    },
+    {
+        "idCanton": "706",
+        "name": "Duacari",
+        "_id": "70605"
+    }
+]

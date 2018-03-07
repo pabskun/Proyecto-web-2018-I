@@ -1,0 +1,70 @@
+// Tipografía de la aplicación
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_ExtraLight.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("./fonts/Montserrat_Black.ttf");
+  font-weight: 900;
+}
+
+// Estilos generales
+body {
+  background: #fff;
+  font-family: 'montserrat';
+
+  .bg-black{
+    background: #000;
+  }
+  .bg-trasparet{
+    background: rgb(0, 0, 0) transparent;
+  }
+  .text-white{
+    color: #fff;
+  }
+  .text-black{
+    color: #000;
+  }
+  .btn{
+    outline: none !important;
+  }
+
+  .mt-6{
+    margin-top: 3.5rem !important;
+  }
+
+  .mt-7{
+    margin-top: 4rem !important;
+  }
+
+  .mt-8{
+    margin-top: 4.5rem !important;
+  }
+}

@@ -2,13 +2,18 @@
 
 const gulp = require('gulp'),
       connect = require('gulp-connect'),
+      sass = require('gulp-sass'),
+      cssnano = require('gulp-cssnano'),
+      rename = require('gulp-rename'),
       nodemon = require('gulp-nodemon'),
       todo = require('gulp-todo'),
       browserSync = require('browser-sync'),
       paths = {
         views : './public/components/**/**/*.html',
-        styles : './public/components/**/**/*.css',
-        js: './public/components/**/**/*.js'
+        styles: './public/sources/styles/**/*.scss',
+        impSass : './public/sources/styles/style.scss',
+        js: './public/components/**/**/*.js',
+        excss: './public/*.css'
       };
 
 gulp.task('connect', () => {
@@ -30,7 +35,9 @@ gulp.task('to-do', () => {
 
 gulp.task('dependencies', () => {
   gulp.src([
-    './node_modules/angular/angular.min.js'
+    './node_modules/angular/angular.min.js',
+    './node_modules/angular-messages/angular-messages.min.js',
+    './node_modules/angularjs-datepicker/src/js/angular-datepicker.js'
   ])
     .pipe(gulp.dest('./public/lib/angular'));
 
@@ -43,9 +50,8 @@ gulp.task('dependencies', () => {
 
   gulp.src([
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/popper.js/dist/popper.min.js'
+    './node_modules/popper.js/dist/umd/popper.min.js'
   ])
     .pipe(gulp.dest('./public/lib/bootstrap'));
 
@@ -62,9 +68,17 @@ gulp.task('reload', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('styles', () => {
+  gulp.src(paths.impSass)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(cssnano())
+  .pipe(rename('styles.min.css'))
+  .pipe(gulp.dest('./public/sources'));
+});
+
 gulp.task('watch', () => {
-  gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
+  gulp.watch([paths.views, paths.styles, paths.js], ['reload', 'to-do', 'styles'])
     .on('change', browserSync.reload);
 });
 
-gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'watch']);
+gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'styles', 'watch']);

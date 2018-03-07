@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   angular
-  .module('arquitectura')
+  .module('tallerRapidito')
   .controller('controladorUsuarios', controladorUsuarios);
 
   controladorUsuarios.$inject = ['$stateParams', '$state', 'servicioUsuarios'];
@@ -39,8 +39,6 @@
     }
 
     vm.registrarVehiculo = (pusuario) => {
-      // console.log(pusuario);
-
       $state.go('vehiculos', { objUsuarioTemp : JSON.stringify(pusuario)});
     }
 

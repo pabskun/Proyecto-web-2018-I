@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="arquitectura">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Kevin Aguilar">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title page-title></title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
-  <!-- Estilo Generales -->
-  <link rel="stylesheet" href="./generalStyles.css">
-</head>
-
-<body>
-
-  <div ui-view></div>
-
-  <!-- Dependencias -->
-  <script src="./lib/bootstrap/jquery.min.js"></script>
-  <script src="./lib/bootstrap/popper.min.js"></script>
-  <script src="./lib/bootstrap/bootstrap.min.js"></script>
-  <script src="./lib/sweetalert/sweetalert.min.js"></script>
-  <!-- Script de Angular -->
-  <script src="./lib/angular/angular.min.js"></script>
-    <!-- Dependencias de Agular -->
-    <script src="./lib/angular/routing/angular-ui-router.min.js"></script>
-    <script src="./lib/angular/routing/ocLazyLoad.min.js"></script>
-    <script src="./lib/angular/routing/page-title.min.js"></script>
-  <!-- Script de la aplicación -->
-  <script src="./clases.js"></script>
-  <script src="./app.js"></script>
-  <script src="./route.js"></script>
-  <!-- servicios -->
-  <script src="./components/services/usuarios.service.js"></script>
-</body>
-
+<html lang="es" ng-app="tallerRapidito">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./sources/img/logo.ico" type="image/x-icon">
+    <meta name="author" content="Kevin Aguilar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title page-title></title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./sources/styles.min.css">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <div ui-view></div>
+    <!-- Dependencias -->
+    <script src="./lib/bootstrap/jquery.min.js"></script>
+    <script src="./lib/bootstrap/popper.min.js"></script>
+    <script src="./lib/bootstrap/bootstrap.min.js"></script>
+    <script src="./lib/sweetalert/sweetalert.min.js"></script>
+    <!-- Script de Angular -->
+    <script src="./lib/angular/angular.min.js"></script>
+      <!-- Dependencias de Agular -->
+      <script src="./lib/angular/routing/angular-ui-router.min.js"></script>
+      <script src="./lib/angular/routing/ocLazyLoad.min.js"></script>
+      <script src="./lib/angular/routing/page-title.min.js"></script>
+      <script src="./lib/angular/angular-messages.min.js"></script>
+      <script src="./lib/angular/angular-datepicker.js"></script>
+    <!-- Script de la aplicación -->
+    <script src="./clases.js"></script>
+    <script src="./app.js"></script>
+    <script src="./route.js"></script>
+    <!-- Servicios -->
+    <script src="./components/services/usuarios.service.js"></script>
+    <script src="./components/services/inicioSesion.service.js"></script>
+    <!-- Directivas -->
+    <script src="./components/directives/header/header.directive.js"></script>
+    <script src="./components/directives/sidebar/sidebar.directive.js"></script>
+    <script src="./components/directives/checkPassword.directive.js"></script>
+  </body>
 </html>

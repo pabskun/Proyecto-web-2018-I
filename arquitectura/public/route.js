@@ -12,8 +12,38 @@
         url: '/',
         templateUrl: './components/landingPage/landingPage.view.html',
         data:{
-          pageTitle: 'Inicio | Ejemplo Arquitectura'
+          pageTitle: 'Taller Rapidito | Inicio'
         }
+      })
+
+      .state('registroUsuarios', {
+        url: '/registerUser',
+        templateUrl: './components/usuarios/registroUsuarios/registroUsuarios.view.html',
+        data:{
+          pageTitle: 'Registro de usuarios | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/usuarios/registroUsuarios/registroUsuarios.controller.js')
+          }]
+        },
+        controller: 'controllerRegistroUsuarios',
+        controllerAs: 'vm'
+      })
+
+      .state('inicioSesion', {
+        url: '/login',
+        templateUrl: './components/inicioSesion/inicioSesion.view.html',
+        data:{
+          pageTitle: 'Inicio de Sesión | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/inicioSesion/inicioSesion.controller.js')
+          }]
+        },
+        controller: 'controladorLogin',
+        controllerAs: 'vm'
       })
 
       .state('usuarios', {
@@ -67,6 +97,6 @@
         controllerAs: 'vm'
       });
 
-    $urlRouterProvider.otherwise('/users');
+    $urlRouterProvider.otherwise('/');
   };
 })();

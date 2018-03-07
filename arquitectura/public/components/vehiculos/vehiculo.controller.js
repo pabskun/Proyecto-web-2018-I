@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   angular
-  .module('arquitectura')
+  .module('tallerRapidito')
   .controller('controladorVehiculo', controladorVehiculo);
 
   controladorVehiculo.$inject = ['$stateParams', '$state', 'servicioUsuarios']

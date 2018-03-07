@@ -1,0 +1,80 @@
+<navegacion-Principal></navegacion-Principal>
+
+<main id="registroUsuarios" class="mt-8">
+  <h1>Registro de Usuarios</h1>
+  <div>
+    <div class="col-4 my-4">
+      <form ng-submit="vm.registrarUsuario(vm.nuevoUsuario)" name="formRegistroUsuarios" novalidate autocomplete="off">
+
+        <div class="form-group">
+          <label for="txtCedula">Cédula</label>
+          <input type="text" id="txtCedula" class="form-control" name="campoCedula" ng-model="vm.nuevoUsuario.cedula" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtNombre1">Primer nombre</label>
+          <input type="text" id="txtNombre1" class="form-control" name="campoNombre" ng-model="vm.nuevoUsuario.nombre1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtNombre2">Segundo nombre</label>
+          <input type="text" id="txtNombre2" class="form-control" name="campoSegundoNombre" ng-model="vm.nuevoUsuario.nombre2" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtApellido1">Primer apellido</label>
+          <input type="text" id="txtApellido1" class="form-control" name="campoPrimerApellido" ng-model="vm.nuevoUsuario.apellido1"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtApellido2">Segundo apellido</label>
+          <input type="text" id="txtApellido2" class="form-control" name="campoSegundoApellido" ng-model="vm.nuevoUsuario.apellido2" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dtFechaNacimiento">Fecha nacimiento</label>
+          <input type="date" id="dtFechaNacimiento" class="form-control" name="campoFecha" ng-model="vm.nuevoUsuario.fechaNacimiento" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtEmail">Correo electrónico</label>
+          <input type="email" id="txtEmail" class="form-control" name="campoCorreo" ng-model="vm.nuevoUsuario.email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtContrasenna">Contraseña</label>
+          <input type="password" id="txtContrasenna" class="form-control" name="campoContrasenna" ng-model="vm.nuevoUsuario.contrasenna" required>
+        </div>
+
+        <div class="form-group">
+          <label for="txtConfirmContrasenna">Confirmar contraseña</label>
+          <input type="password" id="txtConfirmContrasenna" class="form-control" name="campoContrasenna" ng-model="vm.nuevoUsuario.contrasennaConfirm" pw-check required>
+        </div>
+
+        <div class="form-group">
+          <label for="sltProvincia">Provincia</label>
+          <select id="sltProvincia" class="form-control" name="" ng-change="vm.rellenarCantones(vm.nuevoUsuario.provincia._id)" ng-options="provincia as provincia.name for provincia in vm.provincias track by provincia._id" ng-model="vm.nuevoUsuario.provincia" required>
+            <option value="">-- Seleccione una Provincia --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sltCanton">Cantón</label>
+          <select id="sltCanton" class="form-control" name="" ng-change="vm.rellenarDistrito(vm.nuevoUsuario.canton._id)" ng-options="canton as canton.name for canton in vm.cantones track by canton._id" ng-model="vm.nuevoUsuario.canton" required>
+            <option value="">-- Seleccione un Cantón --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sltDistrito">Distrito</label>
+          <select id="sltDistrito" class="form-control" name="" ng-options="distrito as distrito.name for distrito in vm.distritos track by distrito._id" ng-model="vm.nuevoUsuario.distrito" required>
+            <option value="">-- Seleccione un Distrito --</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Registrar</button>
+      </form>
+    </div>
+  </div>
+</main>
