@@ -7,6 +7,6 @@
   controladorLogin.$inject = ['loginService'];
 
   function controladorLogin(loginService){
-    let vm = this;
+    const vm = this;
   }
 })();

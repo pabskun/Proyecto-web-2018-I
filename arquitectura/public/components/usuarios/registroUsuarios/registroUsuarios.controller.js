@@ -14,10 +14,9 @@
     vm.provincias = $http({
       method: 'GET',
       url: './sources/data/provincias.json'
-    }).then(function (success) {
-      console.log(success.datas);
+    }).then( (success) => {
       vm.provincias = success.data;
-    }, function (error) {
+    }, (error) => {
       console.log("Ocurrió un error " + error.data);
     });
 
@@ -33,7 +32,7 @@
           }
         }
         vm.cantones = cantones;
-      }, function (error) {
+      }, (error) => {
         console.log("Ocurrió un error " + error.data)
       });
     }
@@ -51,24 +50,33 @@
           }
         }
         vm.distritos = distritos;
-      }, function (error){
+      }, (error) => {
         console.log("Ocurrió un error " + error.data)
       });
     }
 
     vm.registrarUsuario = (pnuevoUsuario) => {
 
-      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.nombre2, pnuevoUsuario.apellido1, pnuevoUsuario.apellido2, pnuevoUsuario.fechaNacimiento, pnuevoUsuario.email, pnuevoUsuario.contrasenna, pnuevoUsuario.provincia.name);
+      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.nombre2, pnuevoUsuario.apellido1, pnuevoUsuario.apellido2, pnuevoUsuario.fechaNacimiento, pnuevoUsuario.email, pnuevoUsuario.contrasenna, pnuevoUsuario.provincia.name, pnuevoUsuario.canton.name, pnuevoUsuario.distrito.name);
 
       let registroExitoso = servicioUsuarios.addUsuario(objNuevoUsuario);
 
       if(registroExitoso == true){
-        swal("Registro exitoso", "El usuario ha sido registrado correctamente", "success", {
+        swal({
+          title: "Registro exitoso",
+          text: "El usuario ha sido registrado correctamente",
+          icon: "success",
+          button: "Aceptar",
+        });
+        vm.nuevoUsuario = null;
+      }else{
+        swal({
+          title: "Hubo un error",
+          text: "Ha ocurrido un error, inténtelo más tarde",
+          icon: "error",
           button: "Aceptar",
         });
       }
-
-      vm.nuevoUsuario = null;
     }
   }
 })();

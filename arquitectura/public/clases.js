@@ -1,5 +1,5 @@
 class Cliente{
-  constructor(pcedula, pnombre1, pnombre2, papellido1, papellido2, pfechanacimiento, pemail, pcontrasenna){
+  constructor(pcedula, pnombre1, pnombre2, papellido1, papellido2, pfechanacimiento, pemail, pcontrasenna, pprovincia, pcanton, pdistrito){
     this.cedula = pcedula;
     this.primerNombre = pnombre1;
     this.segundoNombre = pnombre2
@@ -7,7 +7,10 @@ class Cliente{
     this.segundoApellido = papellido2;
     this.fechaNacimiento = pfechanacimiento;
     this.correoElectronico = pemail;
-    this.contrasenna = pcontrasenna
+    this.contrasenna = pcontrasenna;
+    this.provincia = pprovincia;
+    this.canton = pcanton;
+    this.distrito = pdistrito;
     this.vehiculos = [];
   }
 

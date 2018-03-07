@@ -8,28 +8,55 @@
 
         <div class="form-group">
           <label for="txtCedula">Cédula</label>
-          <input type="text" id="txtCedula" class="form-control" name="campoCedula" ng-model="vm.nuevoUsuario.cedula" required>
+          <input type="text" id="txtCedula" class="form-control" name="campoCedula" ng-model="vm.nuevoUsuario.cedula" pattern="[0-9]+" maxlength="9" minlength="9" required>
+          <div ng-messages="formRegistroUsuarios.campoCedula.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+            <div ng-message="maxlength">
+              <small class="form-text text-muted">Formato incorrecto</small>
+            </div>
+            <div ng-message="minlength">
+              <small class="form-text text-muted">Formato incorrecto</small>
+            </div>
+            <div ng-message="pattern">
+              <small class="form-text text-muted">Formato incorrecto, ingrese únicamente números</small>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="txtNombre1">Primer nombre</label>
           <input type="text" id="txtNombre1" class="form-control" name="campoNombre" ng-model="vm.nuevoUsuario.nombre1" required>
+          <div ng-messages="formRegistroUsuarios.campoNombre.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+            <div ng-message="email">This field must be a valid email address.</div>
+            <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="txtNombre2">Segundo nombre</label>
-          <input type="text" id="txtNombre2" class="form-control" name="campoSegundoNombre" ng-model="vm.nuevoUsuario.nombre2" required>
+          <input type="text" id="txtNombre2" class="form-control" name="campoSegundoNombre" ng-model="vm.nuevoUsuario.nombre2">
         </div>
 
         <div class="form-group">
           <label for="txtApellido1">Primer apellido</label>
-          <input type="text" id="txtApellido1" class="form-control" name="campoPrimerApellido" ng-model="vm.nuevoUsuario.apellido1"
-            required>
+          <input type="text" id="txtApellido1" class="form-control" name="campoPrimerApellido" ng-model="vm.nuevoUsuario.apellido1" required>
+          <div ng-messages="formRegistroUsuarios.campoPrimerApellido.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+            <div ng-message="email">This field must be a valid email address.</div>
+            <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="txtApellido2">Segundo apellido</label>
-          <input type="text" id="txtApellido2" class="form-control" name="campoSegundoApellido" ng-model="vm.nuevoUsuario.apellido2" required>
+          <input type="text" id="txtApellido2" class="form-control" name="campoSegundoApellido" ng-model="vm.nuevoUsuario.apellido2">
         </div>
 
         <div class="form-group">
@@ -40,40 +67,68 @@
         <div class="form-group">
           <label for="txtEmail">Correo electrónico</label>
           <input type="email" id="txtEmail" class="form-control" name="campoCorreo" ng-model="vm.nuevoUsuario.email" required>
+          <div ng-messages="formRegistroUsuarios.campoCorreo.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+            <div ng-message="email">
+              <small class="form-text text-muted">EL formato del correo electrónico es incorrecto</small>
+            </div>
+            <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="txtContrasenna">Contraseña</label>
-          <input type="password" id="txtContrasenna" class="form-control" name="campoContrasenna" ng-model="vm.nuevoUsuario.contrasenna" required>
+          <input type="password" id="txtContrasenna" class="form-control" name="campoContrasenna" required>
         </div>
 
         <div class="form-group">
           <label for="txtConfirmContrasenna">Confirmar contraseña</label>
-          <input type="password" id="txtConfirmContrasenna" class="form-control" name="campoContrasenna" ng-model="vm.nuevoUsuario.contrasennaConfirm" pw-check required>
+          <input type="password" id="txtConfirmContrasenna" class="form-control" name="campoConfirmContrasenna" ng-model="vm.nuevoUsuario.contrasenna" match-password="campoContrasenna" required>
         </div>
 
         <div class="form-group">
           <label for="sltProvincia">Provincia</label>
-          <select id="sltProvincia" class="form-control" name="" ng-change="vm.rellenarCantones(vm.nuevoUsuario.provincia._id)" ng-options="provincia as provincia.name for provincia in vm.provincias track by provincia._id" ng-model="vm.nuevoUsuario.provincia" required>
+          <select id="sltProvincia" class="form-control" name="sltProvincias" ng-change="vm.rellenarCantones(vm.nuevoUsuario.provincia._id)" ng-options="provincia as provincia.name for provincia in vm.provincias track by provincia._id" ng-model="vm.nuevoUsuario.provincia" required>
             <option value="">-- Seleccione una Provincia --</option>
           </select>
+          <div ng-messages="formRegistroUsuarios.sltProvincias.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="sltCanton">Cantón</label>
-          <select id="sltCanton" class="form-control" name="" ng-change="vm.rellenarDistrito(vm.nuevoUsuario.canton._id)" ng-options="canton as canton.name for canton in vm.cantones track by canton._id" ng-model="vm.nuevoUsuario.canton" required>
+          <select id="sltCanton" class="form-control" name="sltCantones" ng-change="vm.rellenarDistrito(vm.nuevoUsuario.canton._id)" ng-options="canton as canton.name for canton in vm.cantones track by canton._id" ng-model="vm.nuevoUsuario.canton" required>
             <option value="">-- Seleccione un Cantón --</option>
           </select>
+          <div ng-messages="formRegistroUsuarios.sltCantones.$error" role="alert">
+            <div ng-message="required">
+              <small class="form-text text-muted">Este campo es requerido</small>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="sltDistrito">Distrito</label>
-          <select id="sltDistrito" class="form-control" name="" ng-options="distrito as distrito.name for distrito in vm.distritos track by distrito._id" ng-model="vm.nuevoUsuario.distrito" required>
+          <select id="sltDistrito" class="form-control" name="sltDistritos" ng-options="distrito as distrito.name for distrito in vm.distritos track by distrito._id" ng-model="vm.nuevoUsuario.distrito" required>
             <option value="">-- Seleccione un Distrito --</option>
           </select>
+          <div ng-messages="formRegistroUsuarios.sltDistritos.$error" role="alert">
+              <div ng-message="required">
+                <small class="form-text text-muted">Este campo es requerido</small>
+              </div>
+              <div ng-message="email">
+                <small class="form-text text-muted">EL formato del correo electrónico es incorrecto</small>
+              </div>
+              <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Registrar</button>
+        <button type="submit" class="btn btn-success" ng-disabled="formRegistroUsuarios .$error">Registrar</button>
       </form>
     </div>
   </div>

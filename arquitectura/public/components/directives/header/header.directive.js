@@ -5,7 +5,7 @@
   .directive('navegacionPrincipal', navegacionPrincipal);
   
   function navegacionPrincipal(){
-    let navegacion = {
+    const navegacion = {
       templateUrl: '/components/directives/header/header.view.html',
       restrict: 'EA'
     };

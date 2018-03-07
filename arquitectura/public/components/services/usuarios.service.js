@@ -4,34 +4,36 @@
   .module('tallerRapidito')
   .service('servicioUsuarios', servicioUsuarios);
 
-  servicioUsuarios.$inject = ['$log','$http'];
+  servicioUsuarios.$inject = ['$log', '$http', 'localStorageFactory'];
 
-  function servicioUsuarios($log, $http){
+  function servicioUsuarios($log, $http, localStorageFactory){
 
-    let publicAPI = {
+    const usuariosLocal = "usuariosLS";
+
+    const publicAPI = {
       addUsuario : _addUsuario,
       getUsuarios : _getUsuarios,
       addVehiculo : _addVehiculo,
       getVehiculos : _getVehiculos,
       addReparaciones : _addReparaciones,
       getReparaciones : _getReparaciones
-    }
+    };
     return publicAPI;
 
     function _addUsuario(pnuevoUsuario){
       let listaUsuarios = _getUsuarios(),
           registroExitoso = false;
+
       listaUsuarios.push(pnuevoUsuario);
 
-      actualizarLocal(listaUsuarios)
-      registroExitoso = true;
+      registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
 
       return registroExitoso;
     }
 
     function _getUsuarios(){
       let listaUsuarios = [];
-      let listaUsuariosLocal = JSON.parse(localStorage.getItem("usuariosLS"));
+      let listaUsuariosLocal = localStorageFactory.getItem(usuariosLocal);
 
       if(listaUsuariosLocal == null){
         listaUsuarios = [];
@@ -39,7 +41,7 @@
         listaUsuariosLocal.forEach(obj => {
           
           let tempDate = new Date (obj.fechaNacimiento),
-              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna);
+              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna, obj.provincia, obj.canton, obj.distrito);
 
           obj.vehiculos.forEach(objVehiculo => {
             let objTempVehiculo = new Vehiculo(objVehiculo.modelo, objVehiculo.matricula, objVehiculo.marca);
@@ -104,7 +106,7 @@
           reparacionesVehiculos = [];
 
       for(let i = 0; i < listaUsuarios.length; i++){
-        for(let j=0 ;j < listaUsuarios[i].getVehiculos().length; j++){
+        for(let j=0 ;j < listaUsuarios[i].getVehiculos().length; j++) {
           if (objVehiculo.getmatricula() == listaUsuarios[i].getVehiculos()[j].getmatricula()){
             reparacionesVehiculos = listaUsuarios[i].getVehiculos()[j].getReparaciones();
           }
@@ -112,10 +114,5 @@
       }
       return reparacionesVehiculos;
     }
-
-    function actualizarLocal(plistaActualizada){
-      localStorage.setItem('usuariosLS', JSON.stringify(plistaActualizada));
-    }
-
   }
 })();
