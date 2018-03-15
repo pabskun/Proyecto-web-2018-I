@@ -27,19 +27,25 @@
 
         <div class="form-group">
           <label for="txtNombre1">Primer nombre</label>
-          <input type="text" id="txtNombre1" class="form-control" name="campoNombre" ng-model="vm.nuevoUsuario.nombre1" required>
+          <input type="text" id="txtNombre1" class="form-control" name="campoNombre" ng-model="vm.nuevoUsuario.nombre1" pattern="[ñáéíóúA-Za-z ]+" required>
           <div ng-messages="formRegistroUsuarios.campoNombre.$error" role="alert">
             <div ng-message="required">
               <small class="form-text text-muted">Este campo es requerido</small>
             </div>
-            <div ng-message="email">This field must be a valid email address.</div>
-            <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+            <div ng-message="pattern">
+              <small class="form-text text-muted">Formato incorrecto</small>
+            </div>
           </div>
         </div>
 
         <div class="form-group">
           <label for="txtNombre2">Segundo nombre</label>
-          <input type="text" id="txtNombre2" class="form-control" name="campoSegundoNombre" ng-model="vm.nuevoUsuario.nombre2">
+          <input type="text" id="txtNombre2" class="form-control" name="campoSegundoNombre" ng-model="vm.nuevoUsuario.nombre2" pattern="[ñáéíóúA-Za-z ]+">
+          <div ng-messages="formRegistroUsuarios.campoNombre.$error" role="alert">
+            <div ng-message="pattern">
+              <small class="form-text text-muted">Formato incorrecto</small>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
@@ -85,7 +91,7 @@
 
         <div class="form-group">
           <label for="txtConfirmContrasenna">Confirmar contraseña</label>
-          <input type="password" id="txtConfirmContrasenna" class="form-control" name="campoConfirmContrasenna" ng-model="vm.nuevoUsuario.contrasenna" match-password="campoContrasenna" required>
+          <input type="password" id="txtConfirmContrasenna" class="form-control" name="campoConfirmContrasenna" ng-model="vm.nuevoUsuario.contrasenna" required>
         </div>
 
         <div class="form-group">

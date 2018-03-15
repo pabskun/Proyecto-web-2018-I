@@ -2,5 +2,9 @@
   #banner{
     background: url('img/banner.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
+    h1{
+      color: white;
+    }
   }
 }

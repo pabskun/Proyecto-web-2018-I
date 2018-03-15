@@ -38,7 +38,8 @@ gulp.task('dependencies', () => {
     './node_modules/angular/angular.min.js',
     './node_modules/angular-messages/angular-messages.min.js',
     './node_modules/angular-password/angular-password.min.js',
-    './node_modules/angular-scroll/angular-scroll.min.js'
+    './node_modules/angular-scroll/angular-scroll.min.js',
+    './node_modules/angularjs-datepicker/src/js/angular-datepicker.js'
   ])
     .pipe(gulp.dest('./public/lib/angular'));
 

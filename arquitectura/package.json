@@ -38,11 +38,13 @@
     "gulp-todo": "^5.4.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
     "angular-messages": "^1.6.9",
     "angular-password": "^1.0.3",
     "angular-scroll": "^1.0.2",
+    "angularjs-datepicker": "^2.1.23",
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
     "oclazyload": "^1.1.0",
