@@ -59,7 +59,7 @@
         }
       };
 
-      return datosUsuario
+      return datosUsuario;
     }
   }
 })();

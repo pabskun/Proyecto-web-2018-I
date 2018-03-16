@@ -52,7 +52,7 @@
     };
 
     function _getSession() {
-      let sessionActive = sessionStorage.getItem('session');
+      let sessionActive = JSON.parse(sessionStorage.getItem('session'));
 
       return sessionActive;
     }

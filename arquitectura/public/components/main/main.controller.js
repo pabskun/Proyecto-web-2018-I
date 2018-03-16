@@ -7,6 +7,9 @@
   mainController.$inject = ['loginService'];
 
   function mainController(loginService){
+
+    console.log(loginService.getAuthUser());
+
     const vm = this
   };
 })();

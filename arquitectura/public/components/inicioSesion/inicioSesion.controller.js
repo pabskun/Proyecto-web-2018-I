@@ -22,6 +22,7 @@
           icon: "success",
           button: "Aceptar",
         });
+        $state.go('main');
       }else{
         swal({
           title: "Inicio de sesión fallido",
