@@ -22,13 +22,20 @@
 
     function _addUsuario(pnuevoUsuario){
       let listaUsuarios = _getUsuarios(),
-          registroExitoso = false;
+          registroExitoso,
+          usuarioRepetido = false;
 
-      for(let i = 0; i < listaUsuarios.length; i++){
-        if(listaUsuarios[i].getcedula() === pnuevoUsuario.getcedula()){
-          listaUsuarios.push(pnuevoUsuario);
-          registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+      for (let i = 0; i < listaUsuarios.length; i++) {
+        if (listaUsuarios[i].getcedula() == pnuevoUsuario.getcedula()) {
+          usuarioRepetido = true;
         }
+      }
+
+      if(usuarioRepetido === false){
+        listaUsuarios.push(pnuevoUsuario);
+        registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+      }else{
+        registroExitoso = false;
       }
 
       return registroExitoso;

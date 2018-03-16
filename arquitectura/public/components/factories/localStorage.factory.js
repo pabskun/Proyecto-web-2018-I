@@ -12,7 +12,8 @@
       setItem : _setItem,
       getItem : _getItem,
       setSession : _setSession,
-      closeSession : _closeSession
+      closeSession : _closeSession,
+      getSession : _getSession
     };
     return localAPI;
 
@@ -34,21 +35,27 @@
       return arrayData;
     };
 
-    function _setSession(key, value) {
+    function _setSession(value) {
       let response = true;
 
-      sessionStorage.setItem(key, JSON.stringify(value));
+      sessionStorage.setItem('session', JSON.stringify(value));
 
       return response;
     };
 
-    function _closeSession(key) {
+    function _closeSession() {
       let response = true;
 
-      sessionStorage.removeItem(key);
+      sessionStorage.removeItem('session');
 
       return response;
     };
+
+    function _getSession() {
+      let sessionActive = sessionStorage.getItem('session');
+
+      return sessionActive;
+    }
 
   }
 })();

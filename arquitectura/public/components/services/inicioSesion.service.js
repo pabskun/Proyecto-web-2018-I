@@ -8,48 +8,58 @@
 
   function loginService($log, $http, servicioUsuarios, localStorageFactory){
 
-    const sessionList = "session";
-
     const loginAPI = {
       logIn : _logIn,
       logOut : _logOut,
-      isAuth: _isAuth,
       getAuthUser: _getAuthUser
     };
     return loginAPI;
 
     function _logIn(credentials) {
       
-      let allUser = servicioUsuarios.retornarUsuario();
+      let listaUsuarios = servicioUsuarios.getUsuarios();
       let incioExitoso = false;
 
-      for(let i = 0; i<allUser.length; i++){
-        if(allUser[i].getCorreo() == credentials.correo && allUser[i].getContrasenna() == credentials.contrasenna){
-          localStorageFactory.setSession(sessionList, allUser[i].getcedula());
+      for(let i = 0; i<listaUsuarios.length; i++){
+        if(listaUsuarios[i].getCorreo() == credentials.email && listaUsuarios[i].getContrasenna() == credentials.password){
+          localStorageFactory.setSession(listaUsuarios[i].getcedula());
           incioExitoso = true;
         }
       }
       return incioExitoso;
-    }
+    };
 
     function _logOut(){
-      localStorageFactory.closeSession(sessionList);
+      let cierreExitoso = localStorageFactory.closeSession();
+
+      return cierreExitoso;
     };
+
+    function _getAuthUser() {
+      let sessionActiva = localStorageFactory.getSession(),
+          usuarioActivo;
+
+      if(!sessionActiva){
+        usuarioActivo = undefined;
+      }else{
+        usuarioActivo = obtenerDatosUsuarioActivo(sessionActiva);
+      }
+
+      return usuarioActivo;
+    };
+
+
+    function obtenerDatosUsuarioActivo(pcedula){
+      let listaUsuarios = servicioUsuarios.getUsuarios(),
+          datosUsuario;
+
+      for(let i = 0; i < listaUsuarios.length; i++){
+        if(listaUsuarios[i].getcedula() == pcedula){
+          datosUsuario = listaUsuarios[i];
+        }
+      };
+
+      return datosUsuario
+    }
   }
 })();
-
-
-
-    
-
-    function _isAuth(){
-      return !!sessionService.session;
-    }
-    
-    function _getAuthUser() {
-      if (sessionService.session) {
-        return sessionService.session.user;
-      }else{
-        return undefined;
-      }
-    }

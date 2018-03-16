@@ -38,7 +38,6 @@
     }
 
     vm.rellenarDistrito = (pidCanton) => {
-      console.log(pidCanton);
       vm.distritos = $http({
         method: 'GET',
         url: './sources/data/distritos.json'
@@ -51,7 +50,7 @@
         }
         vm.distritos = distritos;
       }, (error) => {
-        console.log("Ocurrió un error " + error.data)
+        console.log("Ocurrió un error " + error.data);
       });
     }
 
