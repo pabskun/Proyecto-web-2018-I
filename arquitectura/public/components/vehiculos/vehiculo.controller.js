@@ -7,7 +7,7 @@
   controladorVehiculo.$inject = ['$stateParams', '$state', 'servicioUsuarios']
 
   function controladorVehiculo($stateParams, $state, servicioUsuarios){
-    let vm = this;
+    const vm = this
 
     // aqui validamos que el paramatero exista, en caso de que no exista nos redijirá al estado anterior
     if(!$stateParams.objUsuarioTemp){

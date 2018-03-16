@@ -7,7 +7,7 @@
   controladorUsuarios.$inject = ['$stateParams', '$state', 'servicioUsuarios'];
 
   function controladorUsuarios($stateParams, $state, servicioUsuarios){
-    let vm = this;
+    const vm = this
 
     vm.nuevoUsuario = {};
     vm.listaUsuarios = listarUsuarios();

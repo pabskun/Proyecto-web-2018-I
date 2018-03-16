@@ -4,9 +4,13 @@
   .module('tallerRapidito')
   .controller('controladorLogin', controladorLogin);
 
-  controladorLogin.$inject = ['loginService'];
+  controladorLogin.$inject = ['$state', 'loginService'];
 
-  function controladorLogin(loginService){
+  function controladorLogin($state, loginService){
     const vm = this;
+
+    vm.credentials = {};
+
+    vm.login = (pcredentials) => {};
   }
 })();

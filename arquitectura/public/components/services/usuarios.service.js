@@ -24,9 +24,12 @@
       let listaUsuarios = _getUsuarios(),
           registroExitoso = false;
 
-      listaUsuarios.push(pnuevoUsuario);
-
-      registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+      for(let i = 0; i < listaUsuarios.length; i++){
+        if(listaUsuarios[i].getcedula() === pnuevoUsuario.getcedula()){
+          listaUsuarios.push(pnuevoUsuario);
+          registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+        }
+      }
 
       return registroExitoso;
     }

@@ -8,9 +8,11 @@
 
   function localStorageFactory($log, $http){
 
-    let localAPI = {
+    const localAPI = {
       setItem : _setItem,
-      getItem : _getItem
+      getItem : _getItem,
+      setSession : _setSession,
+      closeSession : _closeSession
     };
     return localAPI;
 
@@ -19,7 +21,7 @@
 
       localStorage.setItem(key, JSON.stringify(value));
 
-      return response
+      return response;
     };
 
     function _getItem(value) {
@@ -30,6 +32,22 @@
       };
 
       return arrayData;
+    };
+
+    function _setSession(key, value) {
+      let response = true;
+
+      sessionStorage.setItem(key, JSON.stringify(value));
+
+      return response;
+    };
+
+    function _closeSession(key) {
+      let response = true;
+
+      sessionStorage.removeItem(key);
+
+      return response;
     };
 
   }
