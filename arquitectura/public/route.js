@@ -27,7 +27,7 @@
             return $ocLazyLoad.load('./components/usuarios/registroUsuarios/registroUsuarios.controller.js')
           }]
         },
-        controller: 'controllerRegistroUsuarios',
+        controller: 'registerUserController',
         controllerAs: 'vm'
       })
 
@@ -42,7 +42,7 @@
             return $ocLazyLoad.load('./components/inicioSesion/inicioSesion.controller.js')
           }]
         },
-        controller: 'controladorLogin',
+        controller: 'loginController',
         controllerAs: 'vm'
       })
 
@@ -59,60 +59,38 @@
         },
         controller: 'mainController',
         controllerAs: 'vm'
+      })
+      
+      .state('main.registroVehiculos', {
+        url: '/registerCar',
+        templateUrl: './components/vehiculos/registrarVehiculos/registroVehiculos.view.html',
+        data:{
+          pageTitle: 'Registrar vehiculo | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/vehiculos/registrarVehiculos/registroVehiculos.controller.js');
+          }]
+        },
+        controller: 'registerCarController',
+        controllerAs: 'vm'
+      })
+      
+      .state('main.listarVehiculos', {
+        url: '/viewCars',
+        templateUrl: './components/vehiculos/listarVehiclos/listarVehiculos.view.html',
+        data:{
+          pageTitle: 'Vehiculos | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/vehiculos/listarVehiclos/listraVehiculos.controller.js');
+          }]
+        },
+        controller: 'listCarController',
+        controllerAs: 'vm'
       });
 
       $urlRouterProvider.otherwise('/');
-
-      // Viejos
-      // .state('usuarios', {
-      //   url: '/users',
-      //   templateUrl: './components/usuarios/usuarios.view.html',
-      //   data:{
-      //     pageTitle: 'Registro usuarios | Ejemplo Arquitectura'
-      //   },
-      //   resolve: {
-      //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-      //       return $ocLazyLoad.load('./components/usuarios/usuarios.controller.js')
-      //     }]
-      //   },
-      //   controller: 'controladorUsuarios',
-      //   controllerAs: 'vm'
-      // })
-
-      // .state('vehiculos', {
-      //   url: '/cars',
-      //   templateUrl: './components/vehiculos/vehiculo.view.html',
-      //   data:{
-      //     pageTitle: 'Registro vehiculos | Ejemplo Arquitectura'
-      //   },
-      //   params: {
-      //     objUsuarioTemp: ''
-      //   },
-      //   resolve: {
-      //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-      //       return $ocLazyLoad.load('./components/vehiculos/vehiculo.controller.js')
-      //     }]
-      //   },
-      //   controller: 'controladorVehiculo',
-      //   controllerAs: 'vm'
-      // })
-
-      // .state('reparaciones', {
-      //   url: '/works',
-      //   templateUrl: 'components/reparaciones/reparaciones.view.html',
-      //   data:{
-      //     pageTitle: 'Registro reparaciones | Ejemplo Arquitectura'
-      //   },
-      //   params: {
-      //     objVehiculoTemp: ''
-      //   },
-      //   resolve: {
-      //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-      //       return $ocLazyLoad.load('./components/reparaciones/reparaciones.controller.js')
-      //     }]
-      //   },
-      //   controller: 'controladorReparaciones',
-      //   controllerAs: 'vm'
-      // });
   };
 })();

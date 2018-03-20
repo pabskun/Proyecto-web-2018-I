@@ -40,6 +40,16 @@ body {
   background: #fff;
   font-family: 'montserrat';
 
+  aside{
+    height: 100vh;
+
+    a{
+      &:hover{
+        background: #c30303;
+      }
+    }
+  }
+
   .bg-black{
     background: #000;
   }

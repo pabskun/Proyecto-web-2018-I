@@ -1,0 +1,28 @@
+<section>
+  <div>
+
+    <h2 class="text-center my-5">Registro de vehiculos para {{vm.usuarioActivo}}</h2>
+
+    <form class="col-md-6 mx-auto" ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
+
+      <div class="form-group my-4">
+        <label for="">Marca del vehiculo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.marca">
+      </div>
+
+      <div class="form-group my-4">
+        <label for="">Modelo del Vehiculo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.modelo">
+      </div>
+
+      <div class="form-group my-4">
+        <label for="">Matricula</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.matricula">
+      </div>
+
+      <button type="submit" class="btn btn-success mx-auto">Registrar</button>
+
+    </form>
+
+  </div>
+</section>

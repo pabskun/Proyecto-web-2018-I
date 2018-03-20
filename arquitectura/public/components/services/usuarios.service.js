@@ -11,10 +11,11 @@
     const usuariosLocal = "usuariosLS";
 
     const publicAPI = {
-      addUsuario : _addUsuario,
-      getUsuarios : _getUsuarios,
-      addVehiculo : _addVehiculo,
-      getVehiculos : _getVehiculos,
+      addUsuario             : _addUsuario,
+      getUsuarios            : _getUsuarios,
+      addVehiculoPorUsuario  : _addVehiculoPorUsuario,
+      getVehiculosPorUsuario : _getVehiculosPorUsuario,
+
       addReparaciones : _addReparaciones,
       getReparaciones : _getReparaciones
     };
@@ -72,31 +73,44 @@
       return listaUsuarios;
     }
 
-    function _addVehiculo(pvehiculo, pusuario){
-      let listaUsuarios = _getUsuarios();
+    function _addVehiculoPorUsuario(pidUsuarioActivo, pvehiculo){
+      let listaVehiculosPorUsuario = _getVehiculosPorUsuario(pidUsuarioActivo),
+          listaUsuarios = _getUsuarios(),
+          vehiculoRepetido = false,
+          registroValido;
 
-      for(let i = 0; i < listaUsuarios.length; i++){
-        if (pusuario.getcedula() == listaUsuarios[i].getcedula()){
-          listaUsuarios[i].agregarVehiculo(pvehiculo);
+      for (let i = 0; i < listaVehiculosPorUsuario.length; i++) {
+        if(pvehiculo.getmatricula() == listaVehiculosPorUsuario[i].getmatricula()){
+          vehiculoRepetido = true;
         }
       }
 
-      actualizarLocal(listaUsuarios);
-    };
-
-    function _getVehiculos(objUsuario){
-      let listaUsuarios = _getUsuarios();
-      let vehiculosUsuario = [];
-
-      for(let i = 0; i < listaUsuarios.length; i++){
-        if (objUsuario.getcedula() == listaUsuarios[i].getcedula()){
-          vehiculosUsuario = listaUsuarios[i].getVehiculos();
+      if(vehiculoRepetido == false){
+        for(let i = 0; i < listaUsuarios.length; i++){
+          if (pidUsuarioActivo == listaUsuarios[i].getcedula()){
+            listaUsuarios[i].agregarVehiculo(pvehiculo);
+          }
         }
+        registroValido = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+      }else{
+        registroValido = false;
       }
 
-      return vehiculosUsuario;
+      return registroValido;
     }
 
+    function _getVehiculosPorUsuario(pidUsuarioActivo){
+      let listaUsuarios = _getUsuarios(),
+          listaVehiculos = [];
+
+      for (let i = 0; i < listaUsuarios.length; i++) {
+        if(pidUsuarioActivo == listaUsuarios[i].getcedula()){
+          listaVehiculos = listaUsuarios[i].getVehiculos();
+        }
+      }
+      return listaVehiculos;
+    }
+// viejas
     function _addReparaciones(pvehiculo, preparacion){
       let listaUsuarios = _getUsuarios(),
           listaVehiculos = [];

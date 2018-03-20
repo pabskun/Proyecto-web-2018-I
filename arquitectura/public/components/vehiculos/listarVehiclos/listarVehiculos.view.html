@@ -1,0 +1,24 @@
+<section>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Matricula</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="vehiculo in vm.listaVehiculos">
+          <td>{{vehiculo.marca}}</td>
+          <td>{{vehiculo.modelo}}</td>
+          <td>{{vehiculo.matricula}}</td>
+          <td>
+            <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(vehiculo)">Reparaciones</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

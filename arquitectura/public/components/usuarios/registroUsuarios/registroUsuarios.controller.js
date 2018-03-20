@@ -2,11 +2,11 @@
   'use strict';
   angular
   .module('tallerRapidito')
-  .controller('controllerRegistroUsuarios', controllerRegistroUsuarios);
+  .controller('registerUserController', registerUserController);
 
-  controllerRegistroUsuarios.$inject = ['$http', 'servicioUsuarios'];
+  registerUserController.$inject = ['$http', 'servicioUsuarios'];
 
-  function controllerRegistroUsuarios($http, servicioUsuarios){
+  function registerUserController($http, servicioUsuarios){
     const vm = this;
 
     vm.nuevoUsuario = {};

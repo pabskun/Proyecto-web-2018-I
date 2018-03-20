@@ -35,7 +35,7 @@ class Cliente{
   }
 
   getNombre(){
-    return `${this.nombre1} ${this.apellido1}`;
+    return `${this.primerNombre} ${this.primerApellido}`;
   }
 }
 

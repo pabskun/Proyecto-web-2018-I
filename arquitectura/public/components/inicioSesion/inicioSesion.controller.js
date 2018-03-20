@@ -2,11 +2,11 @@
   'use strict';
   angular
   .module('tallerRapidito')
-  .controller('controladorLogin', controladorLogin);
+  .controller('loginController', loginController);
 
-  controladorLogin.$inject = ['$state', 'loginService'];
+  loginController.$inject = ['$state', 'loginService'];
 
-  function controladorLogin($state, loginService){
+  function loginController($state, loginService){
     const vm = this;
 
     vm.credentials = {};

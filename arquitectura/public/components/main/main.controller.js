@@ -4,12 +4,16 @@
   .module('tallerRapidito')
   .controller('mainController', mainController);
 
-  mainController.$inject = ['loginService'];
+  mainController.$inject = ['$state', 'loginService'];
 
-  function mainController(loginService){
+  function mainController($state, loginService){
 
-    console.log(loginService.getAuthUser());
+    const userAuth = loginService.getAuthUser();
 
-    const vm = this
+    if(userAuth == undefined){
+      $state.go('inicioSesion');
+    }
+
+    const vm = this;
   };
 })();
