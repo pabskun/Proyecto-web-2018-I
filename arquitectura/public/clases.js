@@ -1,5 +1,5 @@
 class Cliente{
-  constructor(pcedula, pnombre1, pnombre2, papellido1, papellido2, pfechanacimiento, pemail, pcontrasenna, pprovincia, pcanton, pdistrito){
+  constructor(pcedula, pnombre1, pnombre2, papellido1, papellido2, pfechanacimiento, pemail, pcontrasenna, pprovincia, pcanton, pdistrito, pphoto){
     this.cedula = pcedula;
     this.primerNombre = pnombre1;
     this.segundoNombre = pnombre2
@@ -11,6 +11,7 @@ class Cliente{
     this.provincia = pprovincia;
     this.canton = pcanton;
     this.distrito = pdistrito;
+    this.photo = pphoto;
     this.vehiculos = [];
   }
 
@@ -37,13 +38,18 @@ class Cliente{
   getNombre(){
     return `${this.primerNombre} ${this.primerApellido}`;
   }
+
+  getPhoto(){
+    return this.photo;
+  }
 }
 
 class Vehiculo{
-  constructor(pmodelo, pmatricula, pmarca){
+  constructor(pmodelo, pmatricula, pmarca, pimage){
     this.modelo = pmodelo;
     this.matricula = pmatricula;
     this.marca = pmarca;
+    this.image = pimage;
     this.reparaciones = [];
   }
 
@@ -61,6 +67,10 @@ class Vehiculo{
 
   getInfoVehiculo(){
     return `${this.marca} ${this.modelo}`;
+  }
+
+  getImage(){
+    return this.image;
   }
 }
 

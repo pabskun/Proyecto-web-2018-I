@@ -6,19 +6,32 @@
     <form class="col-md-6 mx-auto" ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
 
       <div class="form-group my-4">
-        <label for="">Marca del vehiculo</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.marca">
+        <label for="txtMarca">Marca del vehiculo</label>
+        <input type="text" class="form-control" id="txtMarca" ng-model="vm.nuevoVehiculo.marca">
       </div>
 
       <div class="form-group my-4">
-        <label for="">Modelo del Vehiculo</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.modelo">
+        <label for="txtModelo">Modelo del Vehiculo</label>
+        <input type="text" class="form-control" id="txtModelo" ng-model="vm.nuevoVehiculo.modelo">
       </div>
 
       <div class="form-group my-4">
-        <label for="">Matricula</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoVehiculo.matricula">
+        <label for="txtMatricula">Matricula</label>
+        <input type="text" class="form-control" id="txtMatricula" ng-model="vm.nuevoVehiculo.matricula">
       </div>
+
+      <div class="form-group my-4">
+        <label for="filePhoto">Example file input</label>
+        <input type="file" class="form-control-file" id="filePhoto" files-input ng-model="vm.nuevoVehiculo.photo">
+      </div>
+      
+      <div ng-repeat="photo in vm.nuevoVehiculo.photo">
+        <div>{{photo.name}}</div>
+        <div>{{photo.lastModified | date  : 'MMMdd,yyyy'}}</td>
+        <div>{{photo.size}}</div>
+        <div>{{photo.type}}</div>
+      </div>
+        
 
       <button type="submit" class="btn btn-success mx-auto">Registrar</button>
 

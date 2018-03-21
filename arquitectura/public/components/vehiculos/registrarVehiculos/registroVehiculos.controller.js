@@ -4,9 +4,9 @@
   .module('tallerRapidito')
   .controller('registerCarController', registerCarController);
 
-  registerCarController.$inject = ['$http', 'servicioUsuarios', 'loginService'];
+  registerCarController.$inject = ['$http', 'servicioUsuarios', 'loginService', 'imageUploadService'];
 
-  function registerCarController($http, servicioUsuarios, loginService){
+  function registerCarController($http, servicioUsuarios, loginService, imageUploadService){
 
     const vm = this;
 
@@ -22,12 +22,14 @@
 
     vm.registrarVehiculo = (pnuevovehiculo) => {
 
+      console.log(pnuevovehiculo.photo);
+
       let objVehiculoNuevo = new Vehiculo(pnuevovehiculo.modelo, pnuevovehiculo.matricula, pnuevovehiculo.marca),
           registroExitoso;
 
       console.log(objVehiculoNuevo);
 
-      registroExitoso = servicioUsuarios.addVehiculoPorUsuario(userAuth.getcedula(), objVehiculoNuevo);
+      registroExitoso = true;
 
       if(registroExitoso == true){
         swal({
