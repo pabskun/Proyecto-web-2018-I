@@ -24,7 +24,7 @@ gulp.task('connect', () => {
   });
   browserSync.init({
     server: './public'
-  })
+  });
 });
 
 gulp.task('to-do', () => {
@@ -36,17 +36,22 @@ gulp.task('to-do', () => {
 gulp.task('dependencies', () => {
   gulp.src([
     './node_modules/angular/angular.min.js',
-    './node_modules/angular-messages/angular-messages.min.js',
-    './node_modules/angular-password/angular-password.min.js',
-    './node_modules/angular-scroll/angular-scroll.min.js',
-    './node_modules/angularjs-datepicker/src/js/angular-datepicker.js'
   ])
     .pipe(gulp.dest('./public/lib/angular'));
 
   gulp.src([
+    './node_modules/angular-messages/angular-messages.min.js',
+    './node_modules/angular-password/angular-password.min.js',
+    './node_modules/angular-scroll/angular-scroll.min.js',
+    './node_modules/ng-file-upload/dist/ng-file-upload.min.js',
+    './node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js'
+  ])
+    .pipe(gulp.dest('./public/lib/angular/dependencies'));
+
+  gulp.src([
     './node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
     './node_modules/oclazyload/dist/ocLazyLoad.min.js',
-    './node_modules/ui-router-page-title/page-title.min.js'
+    './node_modules/ui-router-page-title/page-title.min.js',
   ])
     .pipe(gulp.dest('./public/lib/angular/routing'));
 

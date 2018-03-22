@@ -3,7 +3,7 @@
 
     <h2 class="text-center my-5">Registro de vehiculos para {{vm.usuarioActivo}}</h2>
 
-    <form class="col-md-6 mx-auto" ng-submit="vm.registrarVehiculo(vm.nuevoVehiculo)">
+    <form class="col-md-6 mx-auto" ng-submit="vm.preRegistrarVehiculo(vm.nuevoVehiculo)" autocomplete="off">
 
       <div class="form-group my-4">
         <label for="txtMarca">Marca del vehiculo</label>
@@ -24,6 +24,8 @@
         <label for="filePhoto">Example file input</label>
         <input type="file" class="form-control-file" id="filePhoto" files-input ng-model="vm.nuevoVehiculo.photo">
       </div>
+
+      <button type="submit" class="btn btn-success mx-auto">Registrar</button>
       
       <div ng-repeat="photo in vm.nuevoVehiculo.photo">
         <div>{{photo.name}}</div>
@@ -33,7 +35,7 @@
       </div>
         
 
-      <button type="submit" class="btn btn-success mx-auto">Registrar</button>
+      
 
     </form>
 

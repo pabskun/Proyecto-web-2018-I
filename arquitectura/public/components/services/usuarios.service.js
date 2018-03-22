@@ -52,10 +52,10 @@
         listaUsuariosLocal.forEach(obj => {
           
           let tempDate = new Date (obj.fechaNacimiento),
-              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna, obj.provincia, obj.canton, obj.distrito);
+              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna, obj.provincia, obj.canton, obj.distrito, obj.photo);
 
           obj.vehiculos.forEach(objVehiculo => {
-            let objTempVehiculo = new Vehiculo(objVehiculo.modelo, objVehiculo.matricula, objVehiculo.marca);
+            let objTempVehiculo = new Vehiculo(objVehiculo.modelo, objVehiculo.matricula, objVehiculo.marca, objVehiculo.image);
 
             objUsuarios.agregarVehiculo(objTempVehiculo);
 

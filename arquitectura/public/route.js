@@ -89,6 +89,21 @@
         },
         controller: 'listCarController',
         controllerAs: 'vm'
+      })
+
+      .state('main.verPerfil', {
+        url: '/viewProfile',
+        templateUrl: './components/usuarios/verPerfil/verPerfil.view.html',
+        data:{
+          pageTitle: 'Vehiculos | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/usuarios/verPerfil/verPerfil.controller.js');
+          }]
+        },
+        controller: 'verPerfilController',
+        controllerAs: 'vm'
       });
 
       $urlRouterProvider.otherwise('/');

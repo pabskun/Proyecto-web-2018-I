@@ -19,6 +19,10 @@ class Cliente{
     this.vehiculos.push(pnuevoVehiculo);
   }
 
+  getCantidadVehiculos(){
+    return this.vehiculos.length;
+  }
+
   getVehiculos(){
     return this.vehiculos;
   }
@@ -35,10 +39,21 @@ class Cliente{
     return this.correoElectronico;
   }
 
+  getFecha(){
+    return this.fechaNacimiento;
+  }
+
   getNombre(){
     return `${this.primerNombre} ${this.primerApellido}`;
   }
 
+  getNombreCompleto(){
+    return `${this.primerNombre} ${this.segundoNombre} ${this.primerApellido} ${this.segundoApellido}`;
+  }
+
+  getDireccion(){
+    return `${this.provincia}, ${this.canton}, ${this.distrito}`;
+  }
   getPhoto(){
     return this.photo;
   }

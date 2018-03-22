@@ -4,13 +4,15 @@
   .module('tallerRapidito')
   .controller('registerCarController', registerCarController);
 
-  registerCarController.$inject = ['$http', 'servicioUsuarios', 'loginService', 'imageUploadService'];
+  registerCarController.$inject = ['$http', 'servicioUsuarios', 'loginService', 'imageUploadService', 'Upload'];
 
-  function registerCarController($http, servicioUsuarios, loginService, imageUploadService){
+  function registerCarController($http, servicioUsuarios, loginService, imageUploadService, Upload){
 
     const vm = this;
 
     const userAuth = loginService.getAuthUser();
+
+    console.log(userAuth);
 
     if(userAuth == undefined){
       $state.go('inicioSesion');
@@ -20,16 +22,25 @@
 
     vm.nuevoVehiculo = {};
 
-    vm.registrarVehiculo = (pnuevovehiculo) => {
+    vm.cloudObj = imageUploadService.getConfiguration();
 
-      console.log(pnuevovehiculo.photo);
+    vm.preRegistrarVehiculo = (pnuevoVehiculo) => {
+      vm.cloudObj.data.file = pnuevoVehiculo.photo[0];
+      Upload.upload(vm.cloudObj).success((data) =>{
+        vm.registrarVehiculo(pnuevoVehiculo, data.url);
+     });
+    }
 
-      let objVehiculoNuevo = new Vehiculo(pnuevovehiculo.modelo, pnuevovehiculo.matricula, pnuevovehiculo.marca),
+    vm.registrarVehiculo = (pnuevovehiculo, urlImagen) => {
+
+      console.log(urlImagen);
+      
+      let objVehiculoNuevo = new Vehiculo(pnuevovehiculo.modelo, pnuevovehiculo.matricula, pnuevovehiculo.marca, urlImagen),
           registroExitoso;
 
       console.log(objVehiculoNuevo);
 
-      registroExitoso = true;
+      registroExitoso = servicioUsuarios.addVehiculoPorUsuario(userAuth.getcedula(), objVehiculoNuevo);
 
       if(registroExitoso == true){
         swal({
@@ -47,6 +58,6 @@
           button: "Aceptar",
         });
       }
-    }
+    };
   }
 })();
