@@ -42,7 +42,7 @@
 
     let headline = {
       templateUrl: '/components/directives/headline/headline.view.html',
-      restrict: 'A',
+      restrict: 'EA',
       require: "ngClick",
       controller: headlineController,
       controllerAs: 'vm',
