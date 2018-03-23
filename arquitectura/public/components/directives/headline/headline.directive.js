@@ -8,7 +8,7 @@
 
   function cabeceraPrincipal($state, loginService) {
 
-    let headlineController = function () {
+    let headlineController = () => {
       const vm = this;
       vm.closeSesion = () => {
         swal("Desea cerrar la sesión?", {
@@ -42,7 +42,7 @@
 
     let headline = {
       templateUrl: '/components/directives/headline/headline.view.html',
-      restrict: 'A',
+      restrict: 'EA',
       require: "ngClick",
       controller: headlineController,
       controllerAs: 'vm',

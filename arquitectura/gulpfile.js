@@ -13,6 +13,7 @@ const gulp = require('gulp'),
         styles: './public/sources/styles/**/*.scss',
         impSass : './public/sources/styles/style.scss',
         js: './public/components/**/**/*.js',
+        jsBackEnd: './api/**/**/**/*.js',
         excss: './public/*.css'
       };
 
@@ -25,6 +26,7 @@ gulp.task('connect', () => {
   browserSync.init({
     server: './public'
   });
+  nodemon();
 });
 
 gulp.task('to-do', () => {
@@ -70,7 +72,7 @@ gulp.task('dependencies', () => {
 });
 
 gulp.task('reload', () => {
-  gulp.src([paths.views, paths.styles, paths.js])
+  gulp.src([paths.views, paths.styles, paths.js, paths.jsBackEnd])
     .pipe(connect.reload())
     .pipe(browserSync.stream());
 });
