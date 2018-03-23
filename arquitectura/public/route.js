@@ -102,6 +102,9 @@
             return $ocLazyLoad.load('./components/reparaciones/listarReparaciones/listarReparaciones.controller.js');
           }]
         },
+        params: {
+          idVehiculo: ''
+        },
         controller: 'listarReparacionesController',
         controllerAs: 'vm'
       })

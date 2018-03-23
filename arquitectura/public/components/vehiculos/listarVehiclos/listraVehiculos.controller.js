@@ -4,9 +4,9 @@
   .module('tallerRapidito')
   .controller('listCarController', listCarController);
 
-  listCarController.$inject = ['$http', '$state', 'servicioUsuarios', 'loginService'];
+  listCarController.$inject = ['$http', '$state', '$stateParams', 'servicioUsuarios', 'loginService'];
 
-  function listCarController($http, $state, servicioUsuarios, loginService){
+  function listCarController($http, $state, $stateParams, servicioUsuarios, loginService){
 
     const vm = this;
 
@@ -23,7 +23,7 @@
     vm.listaReparaciones = (pidVehiculo) => {
       console.log(pidVehiculo);
 
-      $state.go('main.listarReparaciones', {objVehiculoTemp: JSON.stringify(pidVehiculo)});
+      $state.go('main.listarReparaciones', {idVehiculo: pidVehiculo});
     }
 
     vm.registrarRepacariones = (pidVehiculo) => {

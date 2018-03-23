@@ -11,6 +11,8 @@
 
     const userAuth = loginService.getAuthUser();
 
+    console.log($stateParams);
+
     if(userAuth == undefined){
       $state.go('inicioSesion');
     }
