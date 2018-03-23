@@ -4,22 +4,30 @@
   .module('tallerRapidito')
   .controller('listCarController', listCarController);
 
-  listCarController.$inject = ['$http', 'servicioUsuarios', 'loginService'];
+  listCarController.$inject = ['$http', '$state', 'servicioUsuarios', 'loginService'];
 
-  function listCarController($http, servicioUsuarios, loginService){
+  function listCarController($http, $state, servicioUsuarios, loginService){
+
+    const vm = this;
 
     const userAuth = loginService.getAuthUser();
 
     if(userAuth == undefined){
       $state.go('inicioSesion');
+    }else{
+      vm.usuarioActivo = userAuth.getNombre();
     }
-    
-    if(userAuth == undefined){
-      $state.go('inicioSesion');
-    }
-
-    const vm = this;
 
     vm.listaVehiculos = servicioUsuarios.getVehiculosPorUsuario(userAuth.getcedula());
+
+    vm.listaReparaciones = (pidVehiculo) => {
+      console.log(pidVehiculo);
+
+      $state.go('main.listarReparaciones', {objVehiculoTemp: JSON.stringify(pidVehiculo)});
+    }
+
+    vm.registrarRepacariones = (pidVehiculo) => {
+      console.log(pidVehiculo)
+    }
   }
 })();

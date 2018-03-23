@@ -76,6 +76,14 @@ class Vehiculo{
     return this.reparaciones;
   }
 
+  getMarca(){
+    return this.marca;
+  }
+
+  getModelo(){
+    return this.modelo;
+  }
+
   getmatricula(){
     return this.matricula;
   }
@@ -90,9 +98,10 @@ class Vehiculo{
 }
 
 class Reparaciones{
-  constructor(pcosto, pdescripcion){
+  constructor(pcosto, pdescripcion, pfechareparacion){
     this.costo = pcosto;
     this.descripcion = pdescripcion;
+    this.fechaReparacion = pfechareparacion;
   }
 
   getCosto(){
@@ -101,5 +110,9 @@ class Reparaciones{
 
   getDescripcion(){
     return this.descripcion;
+  }
+
+  getFechaReparacion(){
+    return this.fechaReparacion;
   }
 }
