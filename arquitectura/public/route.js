@@ -80,7 +80,7 @@
         url: '/viewCars',
         templateUrl: './components/vehiculos/listarVehiclos/listarVehiculos.view.html',
         data:{
-          pageTitle: 'Vehiculos | Taller Rapidito'
+          pageTitle: 'Lista de vehiculos | Taller Rapidito'
         },
         resolve: {
           load: ['$ocLazyLoad', ($ocLazyLoad) => {
@@ -88,6 +88,42 @@
           }]
         },
         controller: 'listCarController',
+        controllerAs: 'vm'
+      })
+
+      .state('main.listarReparaciones', {
+        url: '/listReparation',
+        templateUrl: './components/reparaciones/listarReparaciones/listarReparaciones.view.html',
+        data:{
+          pageTitle: 'Lista de reparaciones | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/reparaciones/listarReparaciones/listarReparaciones.controller.js');
+          }]
+        },
+        params: {
+          idVehiculo: ''
+        },
+        controller: 'listarReparacionesController',
+        controllerAs: 'vm'
+      })
+
+      .state('main.registroReparaciones', {
+        url: '/registerReparation',
+        templateUrl: './components/reparaciones/registroReparaciones/registroReparaciones.view.html',
+        data:{
+          pageTitle: 'Lista de reparaciones | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/reparaciones/registroReparaciones/registroReparaciones.controller.js');
+          }]
+        },
+        params: {
+          idVehiculo: ''
+        },
+        controller: 'registroReparacionesController',
         controllerAs: 'vm'
       })
 
