@@ -54,8 +54,13 @@ class Cliente{
   getDireccion(){
     return `${this.provincia}, ${this.canton}, ${this.distrito}`;
   }
+
   getPhoto(){
     return this.photo;
+  }
+
+  setVehiculos(aVehiculos){
+    this.vehiculos = aVehiculos;
   }
 }
 

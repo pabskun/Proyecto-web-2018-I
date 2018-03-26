@@ -16,18 +16,17 @@
       $state.go('inicioSesion');
     }else{
       vm.usuarioActivo = userAuth.getNombre();
-    }
+    };
 
     vm.listaVehiculos = servicioUsuarios.getVehiculosPorUsuario(userAuth.getcedula());
 
     vm.listaReparaciones = (pidVehiculo) => {
-      console.log(pidVehiculo);
-
       $state.go('main.listarReparaciones', {idVehiculo: pidVehiculo});
-    }
+    };
 
     vm.registrarRepacariones = (pidVehiculo) => {
-      console.log(pidVehiculo)
-    }
-  }
+      $state.go('main.registroReparaciones', {idVehiculo: pidVehiculo});
+    };
+
+  };
 })();

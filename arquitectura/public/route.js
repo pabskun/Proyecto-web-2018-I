@@ -109,6 +109,24 @@
         controllerAs: 'vm'
       })
 
+      .state('main.registroReparaciones', {
+        url: '/registerReparation',
+        templateUrl: './components/reparaciones/registroReparaciones/registroReparaciones.view.html',
+        data:{
+          pageTitle: 'Lista de reparaciones | Taller Rapidito'
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/reparaciones/registroReparaciones/registroReparaciones.controller.js');
+          }]
+        },
+        params: {
+          idVehiculo: ''
+        },
+        controller: 'registroReparacionesController',
+        controllerAs: 'vm'
+      })
+
       .state('main.verPerfil', {
         url: '/viewProfile',
         templateUrl: './components/usuarios/verPerfil/verPerfil.view.html',

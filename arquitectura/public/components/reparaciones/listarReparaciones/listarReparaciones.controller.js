@@ -11,10 +11,24 @@
 
     const userAuth = loginService.getAuthUser();
 
-    console.log($stateParams);
-
     if(userAuth == undefined){
       $state.go('inicioSesion');
+    };
+
+    if (!$stateParams.idVehiculo){
+      $state.go('main.listarVehiculos');
+    };
+
+    vm.vehiculo = servicioUsuarios.getInfoVehiculos(userAuth.getcedula(), $stateParams.idVehiculo);
+
+    vm.listaReparaciones = servicioUsuarios.getReparaciones(userAuth.getcedula(), $stateParams.idVehiculo);
+
+    vm.volver = () => {
+      $state.go('main.listarVehiculos');
+    }
+
+    vm.registrar = () => {
+      $state.go('main.registroReparaciones', {idVehiculo: $stateParams.idVehiculo});
     }
 
   };

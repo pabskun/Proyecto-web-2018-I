@@ -1,0 +1,39 @@
+<section>
+
+  <div class="mt-4">
+    <button class="btn btn-outline-danger" ng-click="vm.volver()">
+      <i class="fas fa-angle-left"></i>
+      Regresar
+    </button>
+
+    <button class="btn btn-outline-success" ng-click="vm.listar()">
+      Ver reparaciones
+      <i class="fas fa-angle-right"></i>
+    </button>
+  </div>
+
+  <div>
+    <h2 class="text-center mt-3 mb-5">Reparaciones del vehiculo {{vm.vehiculo.getInfoVehiculo()}}</h2>
+
+    <form class="col-md-6 mx-auto" ng-submit="vm.registrarReparacion(vm.nuevaReparacion)">
+      <div class="form-group">
+        <label for="">Costo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevaReparacion.costo">
+      </div>
+
+      <div class="form-group my-4">
+        <label for="">Descripcion</label>
+        <input type="text" class="form-control" ng-model="vm.nuevaReparacion.descripcion">
+      </div>
+
+      <div class="form-group my-4">
+        <label for="">Fecha de la reparación</label>
+        <input type="date" class="form-control" ng-model="vm.nuevaReparacion.fechaReparacion">
+      </div>
+
+      <button type="submit" class="btn btn-success">Registrar</button>
+
+      <button type="button" class="btn btn-danger" ng-click="vm.volver()">Cancelar</button>
+    </form>
+  </div>
+</section>
