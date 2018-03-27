@@ -4,9 +4,9 @@
   .module('tallerRapidito')
   .service('loginService', loginService);
 
-  loginService.$inject = ['$log', '$http', 'servicioUsuarios', 'localStorageFactory'];
+  loginService.$inject = ['$log', '$http', 'servicioUsuarios', 'dataStorageFactory'];
 
-  function loginService($log, $http, servicioUsuarios, localStorageFactory){
+  function loginService($log, $http, servicioUsuarios, dataStorageFactory){
 
     const loginAPI = {
       logIn : _logIn,
@@ -22,7 +22,7 @@
 
       for(let i = 0; i<listaUsuarios.length; i++){
         if(listaUsuarios[i].getCorreo() == credentials.email && listaUsuarios[i].getContrasenna() == credentials.password){
-          localStorageFactory.setSession(listaUsuarios[i].getcedula());
+          dataStorageFactory.setSession(listaUsuarios[i].getcedula());
           incioExitoso = true;
         }
       }
@@ -30,13 +30,13 @@
     };
 
     function _logOut(){
-      let cierreExitoso = localStorageFactory.closeSession();
+      let cierreExitoso = dataStorageFactory.closeSession();
 
       return cierreExitoso;
     };
 
     function _getAuthUser() {
-      let sessionActiva = localStorageFactory.getSession(),
+      let sessionActiva = dataStorageFactory.getSession(),
           usuarioActivo;
 
       if(!sessionActiva){

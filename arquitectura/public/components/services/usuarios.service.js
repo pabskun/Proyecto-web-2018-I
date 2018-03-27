@@ -4,15 +4,15 @@
   .module('tallerRapidito')
   .service('servicioUsuarios', servicioUsuarios);
 
-  servicioUsuarios.$inject = ['$log', '$http', 'localStorageFactory'];
+  servicioUsuarios.$inject = ['$log', '$http', 'dataStorageFactory'];
 
   /**
    * Función que posee todos los métodos del servicio
    * @param {*} $log
    * @param {Peticiones asincrónicas} $http
-   * @param {Factorias que se encarga de ir al local Storage} localStorageFactory 
+   * @param {Factorias que se encarga de ir al local Storage} dataStorageFactory 
    */
-  function servicioUsuarios($log, $http, localStorageFactory){
+  function servicioUsuarios($log, $http, dataStorageFactory){
 
     const usuariosLocal = "usuariosLS";
 
@@ -44,7 +44,7 @@
 
       if(usuarioRepetido === false){
         listaUsuarios.push(pnuevoUsuario);
-        registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+        registroExitoso = dataStorageFactory.setItem(usuariosLocal, listaUsuarios);
       }else{
         registroExitoso = false;
       }
@@ -57,7 +57,7 @@
      */
     function _getUsuarios(){
       let listaUsuarios = [];
-      let listaUsuariosLocal = localStorageFactory.getItem(usuariosLocal);
+      let listaUsuariosLocal = dataStorageFactory.getItem(usuariosLocal);
 
       if(listaUsuariosLocal == null){
         listaUsuarios = [];
@@ -109,7 +109,7 @@
             listaUsuarios[i].agregarVehiculo(pvehiculo);
           }
         }
-        registroValido = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+        registroValido = dataStorageFactory.setItem(usuariosLocal, listaUsuarios);
       }else{
         registroValido = false;
       }
@@ -174,7 +174,7 @@
         }
       }
 
-      registroExitoso = localStorageFactory.setItem(usuariosLocal, listaUsuarios);
+      registroExitoso = dataStorageFactory.setItem(usuariosLocal, listaUsuarios);
 
       return registroExitoso;
     }

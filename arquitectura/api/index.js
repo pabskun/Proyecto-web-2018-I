@@ -1,14 +1,9 @@
-'use strict';
-
 const express = require('express'),
-      bodyParser = require('body-parser'),
-      mongoose = require('mongoose'),
+      router = express.Router(),
       path = require('path');
 
-require('dotenv').config();
+router.get('*', (req, res, next) => {
+  res.sendFile(path.join(__dirname + '/../public/index.html'));
+});
 
-const app = express(),
-      db = mongoose.connection,
-      dburl = 'mongodb://admin:cenfotec@ds029715.mlab.com:29715/db_taller_rapidito',
-      port = 6000,
-      server = app.listen(port, _server());
+module.exports = router;

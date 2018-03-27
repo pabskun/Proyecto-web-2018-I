@@ -2,11 +2,11 @@
   'use strict';
   angular
   .module('tallerRapidito')
-  .factory('localStorageFactory', localStorageFactory);
+  .factory('dataStorageFactory', dataStorageFactory);
 
-  localStorageFactory.$inject = ['$log','$http'];
+  dataStorageFactory.$inject = ['$log','$http'];
 
-  function localStorageFactory($log, $http){
+  function dataStorageFactory($log, $http){
 
     const localAPI = {
       setItem : _setItem,
