@@ -8,8 +8,8 @@
 
   function cabeceraPrincipal($state, loginService) {
 
-    let headlineController = () => {
-      let vm = this;
+    let headlineController = function () {
+      const vm = this;
       vm.closeSesion = () => {
         swal("Desea cerrar la sesión?", {
             buttons: {
