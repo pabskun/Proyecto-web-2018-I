@@ -4,7 +4,7 @@
   .module('tallerRapidito')
   .service('servicioUsuarios', servicioUsuarios);
 
-  servicioUsuarios.$inject = ['$log', '$http', 'dataStorageFactory'];
+  servicioUsuarios.$inject = ['$q', '$http', 'dataStorageFactory'];
 
   /**
    * Función que posee todos los métodos del servicio
@@ -12,9 +12,10 @@
    * @param {Peticiones asincrónicas} $http
    * @param {Factorias que se encarga de ir al local Storage} dataStorageFactory 
    */
-  function servicioUsuarios($log, $http, dataStorageFactory){
+  function servicioUsuarios($q, $http, dataStorageFactory){
 
-    const usuariosLocal = "usuariosLS";
+    const usuariosLocal = 'usuariosLS';
+    const userUrl = 'http://localhost:4000/api/get_all_users';
 
     const publicAPI = {
       addUsuario : _addUsuario,
@@ -56,8 +57,17 @@
      * Función que retorna todos los usuarios, con sus vehiculos y reparaciones registrados dentro del sistema
      */
     function _getUsuarios(){
-      let listaUsuarios = [];
-      let listaUsuariosLocal = dataStorageFactory.getItem(usuariosLocal);
+      let listaUsuarios = [],
+          listaUsuariosLocal = dataStorageFactory.getItem(usuariosLocal);
+      let datos = $q.defer();
+      let lista;
+      
+      dataStorageFactory.getData(userUrl).then((response) => {
+        datos.resolve(response.data);
+        return datos.promise;
+      });
+
+      console.log(datos);
 
       if(listaUsuariosLocal == null){
         listaUsuarios = [];
