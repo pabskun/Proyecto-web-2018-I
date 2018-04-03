@@ -63,8 +63,8 @@ app.use( (req, res, next) => {
  */
 const index = require('./index'),
       usuarios = require('./components/usuarios/usuarios.route');
-      // vehiculos = require('./components/vehiculos/vehiculos.api'),
-      // reparaciones = require('./components/reparaciones/reparaciones.api');
+      // vehiculos = require('./components/vehiculos/vehiculos.route'),
+      // reparaciones = require('./components/reparaciones/reparaciones.route');
 
 /**
  * Se definien las rutas de ExpressJS

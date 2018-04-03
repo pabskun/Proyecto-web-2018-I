@@ -1,6 +1,6 @@
 const UserModel = require('./usuarios.model');
 
-module.exports.save = (req, res) => {
+module.exports.registrar = (req, res) => {
   let newUser = new User({
     cedula              :  req.body.cedula,
     primerNombre        :  req.body.primerNombre,
@@ -26,16 +26,16 @@ module.exports.save = (req, res) => {
   });
 };
 
-module.exports.findAll = (req,res) => {
+module.exports.listarTodos = (req,res) => {
   UserModel.find().then((user) => {
     res.send(user);
   });
 };
 
-module.exports.update = (req,res) => {
+module.exports.actualizar = (req,res) => {
   UserModel.findByIdAndUpdate(req.body._id, { $set: req.body}, (err, user) => {
     if (err){
-      res.json({success:true,msg:'No se ha actualizado.' + handleError(err)});
+      res.json({success:false,msg:'No se ha actualizado.' + handleError(err)});
 
     } else{
       res.json({success:true,msg:'Se ha actualizado correctamente.' + res});
