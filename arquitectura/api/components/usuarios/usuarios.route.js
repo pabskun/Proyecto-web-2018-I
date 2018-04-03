@@ -13,9 +13,9 @@ router.param('id', (req, res, next, id) => {
 /**
  * Función que se encarga de registrar los usuarios dentro del local storage
  */
-router.route('/set_user')
+router.route('/save_user')
   .post((req, res) => {
-    users.save(req,res);
+    users.registrar(req,res);
 });
 
 /**
@@ -23,7 +23,7 @@ router.route('/set_user')
  */
 router.route('/get_all_users')
   .get((req, res) => {
-    users.findAll(req,res);
+    users.listarTodos(req,res);
 });
 
 /**
@@ -31,7 +31,7 @@ router.route('/get_all_users')
  */
 router.route('/update_users')
   .put((req, res) => {
-    users.update(req,res);
+    users.actualizar(req,res);
 });
 
 module.exports = router;
