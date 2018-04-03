@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(morgan('dev'));
+app.use(morgan('dev'));//////invest
 
 app.use( (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');

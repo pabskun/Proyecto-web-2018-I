@@ -15,7 +15,6 @@
   function servicioUsuarios($q, $http, dataStorageFactory){
 
     const usuariosLocal = 'usuariosLS';
-    const userUrl = 'http://localhost:4000/api/get_all_users';
 
     const publicAPI = {
       addUsuario : _addUsuario,
@@ -59,15 +58,11 @@
     function _getUsuarios(){
       let listaUsuarios = [],
           listaUsuariosLocal = dataStorageFactory.getItem(usuariosLocal);
-      let datos = $q.defer();
+     
+      let listaTem = dataStorageFactory.getUserData();
       let lista;
-      
-      dataStorageFactory.getData(userUrl).then((response) => {
-        datos.resolve(response.data);
-        return datos.promise;
-      });
 
-      console.log(datos);
+      console.log(listaTem);
 
       if(listaUsuariosLocal == null){
         listaUsuarios = [];

@@ -1,7 +1,7 @@
 const UserModel = require('./usuarios.model');
 
 module.exports.save = (req, res) => {
-  let newUser = new User({
+  let newUser = new UserModel({
     cedula              :  req.body.cedula,
     primerNombre        :  req.body.primerNombre,
     segundoNombre       :  req.body.segundoNombre,

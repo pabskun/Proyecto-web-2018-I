@@ -4,15 +4,15 @@
   .module('tallerRapidito')
   .factory('dataStorageFactory', dataStorageFactory);
 
-  dataStorageFactory.$inject = ['$log','$http'];
+  dataStorageFactory.$inject = ['$q', '$log', '$http'];
 
-  function dataStorageFactory($log, $http){
+  function dataStorageFactory($q, $log, $http){
 
     const localAPI = {
       setItem : _setItem,
       getItem : _getItem,
 
-      getData : _getData,
+      getUserData : _getUserData,
       setSession : _setSession,
       closeSession : _closeSession,
       getSession : _getSession
@@ -37,12 +37,9 @@
       return arrayData;
     };
 
-    /**
-     * Función que retorna los datos traidos desde el backend
-     */
-    function _getData(value){
-      let data = $http.get(value);
-      return data;
+    function _getUserData() {
+      
+      return $http.get('http://localhost:4000/api/get_all_users');
     }
 
     /**
