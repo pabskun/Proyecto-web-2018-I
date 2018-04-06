@@ -7,6 +7,7 @@ let CarSchema = new mongoose.Schema({
   matricula : String,
   marca : String,
   image : String,
+  idCliente: String,
   reparaciones : Array
 });
 

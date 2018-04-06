@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
   "devDependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "browser-sync": "^2.23.6",
-    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.2.0",

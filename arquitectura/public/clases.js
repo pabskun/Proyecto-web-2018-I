@@ -65,11 +65,12 @@ class Cliente{
 }
 
 class Vehiculo{
-  constructor(pmodelo, pmatricula, pmarca, pimage){
+  constructor(pmodelo, pmatricula, pmarca, pimage, pidcliente){
     this.modelo = pmodelo;
     this.matricula = pmatricula;
     this.marca = pmarca;
     this.image = pimage;
+    this.idCliente = pidcliente,
     this.reparaciones = [];
   }
 
@@ -99,6 +100,10 @@ class Vehiculo{
 
   getImage(){
     return this.image;
+  }
+
+  getCedulaDuenno(){
+    return this.idCliente;
   }
 }
 

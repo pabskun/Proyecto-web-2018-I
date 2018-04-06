@@ -16,16 +16,8 @@
     return loginAPI;
 
     function _logIn(credentials) {
-      
-      let listaUsuarios = servicioUsuarios.getUsuarios();
-      let incioExitoso = false;
+      let incioExitoso = dataStorageFactory.setSession(credentials);
 
-      for(let i = 0; i<listaUsuarios.length; i++){
-        if(listaUsuarios[i].getCorreo() == credentials.email && listaUsuarios[i].getContrasenna() == credentials.password){
-          dataStorageFactory.setSession(listaUsuarios[i].getcedula());
-          incioExitoso = true;
-        }
-      }
       return incioExitoso;
     };
 

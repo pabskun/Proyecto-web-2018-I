@@ -1,8 +1,8 @@
 (() => {
   'use strict';
   angular
-  .module('tallerRapidito')
-  .service('servicioUsuarios', servicioUsuarios);
+    .module('tallerRapidito')
+    .service('servicioUsuarios', servicioUsuarios);
 
   servicioUsuarios.$inject = ['$q', '$http', 'dataStorageFactory'];
 
@@ -12,18 +12,20 @@
    * @param {Peticiones asincrónicas} $http
    * @param {Factorias que se encarga de ir al local Storage} dataStorageFactory 
    */
-  function servicioUsuarios($q, $http, dataStorageFactory){
+  function servicioUsuarios($q, $http, dataStorageFactory) {
 
     const usuariosLocal = 'usuariosLS';
 
     const publicAPI = {
-      addUsuario : _addUsuario,
-      getUsuarios : _getUsuarios,
-      addVehiculoPorUsuario : _addVehiculoPorUsuario,
-      getVehiculosPorUsuario : _getVehiculosPorUsuario,
-      getInfoVehiculos : _getInfoVehiculos,
-      addReparaciones : _addReparaciones,
-      getReparaciones : _getReparaciones
+      addUsuario: _addUsuario,
+      getUsuarios: _getUsuarios,
+      getVehiculos: _getVehiculos,
+
+      addVehiculoPorUsuario: _addVehiculoPorUsuario,
+      getVehiculosPorUsuario: _getVehiculosPorUsuario,
+      getInfoVehiculos: _getInfoVehiculos,
+      addReparaciones: _addReparaciones,
+      getReparaciones: _getReparaciones
     };
     return publicAPI;
 
@@ -31,10 +33,10 @@
      * Función que registra al usuario dentro del sistema
      * @param {Objeto de tipo Usuario} pnuevoUsuario 
      */
-    function _addUsuario(pnuevoUsuario){
+    function _addUsuario(pnuevoUsuario) {
       let listaUsuarios = _getUsuarios(),
-          registroExitoso,
-          usuarioRepetido = false;
+        registroExitoso,
+        usuarioRepetido = false;
 
       for (let i = 0; i < listaUsuarios.length; i++) {
         if (listaUsuarios[i].getcedula() == pnuevoUsuario.getcedula()) {
@@ -42,10 +44,9 @@
         }
       }
 
-      if(usuarioRepetido === false){
-        listaUsuarios.push(pnuevoUsuario);
-        registroExitoso = dataStorageFactory.setItem(usuariosLocal, listaUsuarios);
-      }else{
+      if (usuarioRepetido === false) {
+        registroExitoso = dataStorageFactory.setUserData(pnuevoUsuario);
+      } else {
         registroExitoso = false;
       }
 
@@ -53,38 +54,46 @@
     }
 
     /**
-     * Función que retorna todos los usuarios, con sus vehiculos y reparaciones registrados dentro del sistema
+     * Función que retorna todos los usuarios registrados dentro del sistema
      */
-    function _getUsuarios(){
+    function _getUsuarios() {
       let listaUsuarios = [],
-          listaUsuariosLocal = dataStorageFactory.getUserData();
+        listaUsuariosBD = dataStorageFactory.getUsersData();
 
-      if(listaUsuariosLocal == null){
-        listaUsuarios = [];
-      }else{
-        listaUsuariosLocal.forEach(obj => {
-          
-          let tempDate = new Date (obj.fechaNacimiento),
-              objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna, obj.provincia, obj.canton, obj.distrito, obj.photo);
+      listaUsuariosBD.forEach(obj => {
+        let tempDate = new Date(obj.fechaNacimiento),
+          objUsuarios = new Cliente(obj.cedula, obj.primerNombre, obj.segundoNombre, obj.primerApellido, obj.segundoApellido, tempDate, obj.correoElectronico, obj.contrasenna, obj.provincia, obj.canton, obj.distrito, obj.photo);
 
-          // obj.vehiculos.forEach(objVehiculo => {
-          //   let objTempVehiculo = new Vehiculo(objVehiculo.modelo, objVehiculo.matricula, objVehiculo.marca, objVehiculo.image);
+        objUsuarios.setVehiculos(obj.vehiculos);
 
-          //   objUsuarios.agregarVehiculo(objTempVehiculo);
+        listaUsuarios.push(objUsuarios);
+      });
 
-          //   objVehiculo.reparaciones.forEach(objReparciones => {
-          //     let objTempReparaciones = new Reparaciones(objReparciones.costo, objReparciones.descripcion, objReparciones.fechaReparacion);
-
-          //     objTempVehiculo.agregarReparaciones(objTempReparaciones);
-          //   });
-          // });
-
-          listaUsuarios.push(objUsuarios);
-        });
-      }
-
-      console.log(listaUsuarios);
       return listaUsuarios;
+    }
+
+    /**
+     * Función que retorna todos los vehiculo, con sus reparaciones registradas dentro del sistema
+     */
+    function _getVehiculos() {
+      let listaVehiculos = [],
+        listaVehiculosBD = dataStorageFactory.getCarsData();
+
+      listaVehiculosBD.forEach(obj => {
+        let objVehiculo = new Vehiculo(obj.modelo, obj.matricula, obj.marca, obj.image, obj.idCliente);
+
+        obj.reparaciones.forEach(objRep => {
+          let tempDate = new Date(objRep.fechaReparacion),
+            objReparacion = new Reparaciones(objRep.costo, objRep.descripcion, tempDate);
+
+          objVehiculo.agregarReparaciones(objReparacion);
+        });
+
+        listaVehiculos.push(objVehiculo);
+      });
+
+      console.log(listaVehiculos);
+      return listaVehiculos;
     }
 
     /**
@@ -92,26 +101,26 @@
      * @param {Cédula del usuario activo} pidUsuarioActivo 
      * @param {Objeto de tipo vehiculo} pvehiculo 
      */
-    function _addVehiculoPorUsuario(pidUsuarioActivo, pvehiculo){
+    function _addVehiculoPorUsuario(pidUsuarioActivo, pvehiculo) {
       let listaVehiculosPorUsuario = _getVehiculosPorUsuario(pidUsuarioActivo),
-          listaUsuarios = _getUsuarios(),
-          vehiculoRepetido = false,
-          registroValido;
+        listaUsuarios = _getUsuarios(),
+        vehiculoRepetido = false,
+        registroValido;
 
       for (let i = 0; i < listaVehiculosPorUsuario.length; i++) {
-        if(pvehiculo.getmatricula() == listaVehiculosPorUsuario[i].getmatricula()){
+        if (pvehiculo.getmatricula() == listaVehiculosPorUsuario[i].getmatricula()) {
           vehiculoRepetido = true;
         }
       }
 
-      if(vehiculoRepetido == false){
-        for(let i = 0; i < listaUsuarios.length; i++){
-          if (pidUsuarioActivo == listaUsuarios[i].getcedula()){
+      if (vehiculoRepetido == false) {
+        for (let i = 0; i < listaUsuarios.length; i++) {
+          if (pidUsuarioActivo == listaUsuarios[i].getcedula()) {
             listaUsuarios[i].agregarVehiculo(pvehiculo);
           }
         }
         registroValido = dataStorageFactory.setItem(usuariosLocal, listaUsuarios);
-      }else{
+      } else {
         registroValido = false;
       }
 
@@ -122,13 +131,13 @@
      * Función que recibe el número de cédula del usuario activo y retorna los vehiculo registrados para ese usuario
      * @param {Cédula del usuario activo} pidUsuarioActivo 
      */
-    function _getVehiculosPorUsuario(pidUsuarioActivo){
-      let listaUsuarios = _getUsuarios(),
-          listaVehiculos = [];
+    function _getVehiculosPorUsuario(pidUsuarioActivo) {
+      let listaAllVehiculos = _getVehiculos(),
+        listaVehiculos = [];
 
-      for (let i = 0; i < listaUsuarios.length; i++) {
-        if(pidUsuarioActivo == listaUsuarios[i].getcedula()){
-          listaVehiculos = listaUsuarios[i].getVehiculos();
+      for (let i = 0; i < listaAllVehiculos.length; i++) {
+        if (pidUsuarioActivo == listaAllVehiculos[i].getCedulaDuenno()) {
+          listaVehiculos.push(listaAllVehiculos[i]);
         }
       }
       return listaVehiculos;
@@ -139,12 +148,12 @@
      * @param {Cédula del usuario activo} pidUsuarioActivo 
      * @param {Matricula del vehiculo} pvehiculoid 
      */
-    function _getInfoVehiculos(pidUsuarioActivo, pvehiculoid){
+    function _getInfoVehiculos(pidUsuarioActivo, pvehiculoid) {
       let listaVehiculosPorUsuario = _getVehiculosPorUsuario(pidUsuarioActivo),
-          vehiculoActivo;
+        vehiculoActivo;
 
-      for(let i = 0; i < listaVehiculosPorUsuario.length; i++){
-        if(listaVehiculosPorUsuario[i].getmatricula() == pvehiculoid){
+      for (let i = 0; i < listaVehiculosPorUsuario.length; i++) {
+        if (listaVehiculosPorUsuario[i].getmatricula() == pvehiculoid) {
           vehiculoActivo = listaVehiculosPorUsuario[i];
         }
       }
@@ -158,19 +167,19 @@
      * @param {Matricula del vehiculo} pvehiculoid 
      * @param {Objeto de tipo reparación} preparacion 
      */
-    function _addReparaciones(pidUsuarioActivo, pvehiculoid, preparacion){
+    function _addReparaciones(pidUsuarioActivo, pvehiculoid, preparacion) {
       let listaUsuarios = _getUsuarios(),
-          listaVehiculos = _getVehiculosPorUsuario(pidUsuarioActivo),
-          registroExitoso;
+        listaVehiculos = _getVehiculosPorUsuario(pidUsuarioActivo),
+        registroExitoso;
 
-      for(let i = 0; i < listaVehiculos.length; i++){
-        if(listaVehiculos[i].getmatricula() == pvehiculoid){
+      for (let i = 0; i < listaVehiculos.length; i++) {
+        if (listaVehiculos[i].getmatricula() == pvehiculoid) {
           listaVehiculos[i].agregarReparaciones(preparacion);
         }
       }
 
-      for(let i = 0; i < listaUsuarios.length; i++){
-        if(listaUsuarios[i].getcedula() == pidUsuarioActivo){
+      for (let i = 0; i < listaUsuarios.length; i++) {
+        if (listaUsuarios[i].getcedula() == pidUsuarioActivo) {
           listaUsuarios[i].vehiculos = listaVehiculos;
         }
       }
@@ -185,12 +194,12 @@
      * @param {Cédula del usuario activo} pidUsuarioActivo 
      * @param {Matricula del vehiculo} pvehiculoid 
      */
-    function _getReparaciones(pidUsuarioActivo, pvehiculoid){
+    function _getReparaciones(pidUsuarioActivo, pvehiculoid) {
       let listaVehiculos = _getVehiculosPorUsuario(pidUsuarioActivo),
-          reparacionesVehiculos = [];
+        reparacionesVehiculos = [];
 
-      for(let i = 0; i < listaVehiculos.length; i++){
-        if (pvehiculoid == listaVehiculos[i].getmatricula()){
+      for (let i = 0; i < listaVehiculos.length; i++) {
+        if (pvehiculoid == listaVehiculos[i].getmatricula()) {
           reparacionesVehiculos = listaVehiculos[i].getReparaciones();
         }
       }

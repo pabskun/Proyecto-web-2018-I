@@ -4,9 +4,9 @@
   .module('tallerRapidito')
   .controller('registerUserController', registerUserController);
 
-  registerUserController.$inject = ['$http', 'servicioUsuarios'];
+  registerUserController.$inject = ['$http','imageUploadService', 'servicioUsuarios', 'Upload'];
 
-  function registerUserController($http, servicioUsuarios){
+  function registerUserController($http, imageUploadService, servicioUsuarios, Upload){
     const vm = this;
 
     vm.nuevoUsuario = {};
@@ -54,28 +54,27 @@
       });
     }
 
-    vm.registrarUsuario = (pnuevoUsuario) => {
+    vm.cloudObj = imageUploadService.getConfiguration();
 
-      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.nombre2, pnuevoUsuario.apellido1, pnuevoUsuario.apellido2, pnuevoUsuario.fechaNacimiento, pnuevoUsuario.email, pnuevoUsuario.contrasenna, pnuevoUsuario.provincia.name, pnuevoUsuario.canton.name, pnuevoUsuario.distrito.name);
+    vm.preRegistrarUsuario = (pnuevoUsuario) => {
+      vm.cloudObj.data.file = pnuevoUsuario.photo[0];
+      Upload.upload(vm.cloudObj).success((data) =>{
+        vm.registrarUsuario(pnuevoUsuario, data.url);
+     });
+    }
+
+    vm.registrarUsuario = (pnuevoUsuario, urlImagen) => {
+      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.nombre2, pnuevoUsuario.apellido1, pnuevoUsuario.apellido2, pnuevoUsuario.fechaNacimiento, pnuevoUsuario.email, pnuevoUsuario.contrasenna, pnuevoUsuario.provincia.name, pnuevoUsuario.canton.name, pnuevoUsuario.distrito.name, urlImagen);
 
       let registroExitoso = servicioUsuarios.addUsuario(objNuevoUsuario);
 
-      if(registroExitoso == true){
-        swal({
-          title: "Registro exitoso",
-          text: "El usuario ha sido registrado correctamente",
-          icon: "success",
-          button: "Aceptar",
-        });
+      swal({
+        title: "Registro exitoso",
+        text: registroExitoso,
+        button: "Aceptar",
+      }).then((value) => {
         vm.nuevoUsuario = null;
-      }else{
-        swal({
-          title: "Hubo un error",
-          text: "Ha ocurrido un error, inténtelo más tarde",
-          icon: "error",
-          button: "Aceptar",
-        });
-      }
+      });
     }
   }
 })();

@@ -1,6 +1,6 @@
 const UserModel = require('./usuarios.model');
 
-module.exports.save = (req, res) => {
+module.exports.registrar = (req, res) => {
   let newUser = new UserModel({
     cedula              :  req.body.cedula,
     primerNombre        :  req.body.primerNombre,
@@ -17,7 +17,7 @@ module.exports.save = (req, res) => {
     vehiculos           :  req.body.vehiculos,
   });
 
-  newUser.registrar((err) => {
+  newUser.save((err) => {
     if(err){
       res.json({success:false, msg: 'Ha ocurrido un error en el registro de usuarios' + err});
     }else{

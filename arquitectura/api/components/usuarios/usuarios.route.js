@@ -34,4 +34,9 @@ router.route('/update_users')
     users.actualizar(req,res);
 });
 
+router.route('/login')
+  .put((req,res) => {
+    users.iniciarSesion(req,res);
+  });
+
 module.exports = router;

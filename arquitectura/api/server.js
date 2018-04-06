@@ -19,8 +19,6 @@ let db = mongoose.connection,
 
 let server = app.listen(port,_server());
 
-
-
 /**
  * Se define la conexión con Mongoose, enviándole como parámetro la url de la base de datos
  */
@@ -45,10 +43,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Le indicamos a la aplicación que el formato de los datos va a ser JSON
  */
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(morgan('dev'));//////invest
+app.use(morgan('dev'));
 
 app.use( (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -62,15 +59,14 @@ app.use( (req, res, next) => {
  * Exportamos las funcionalidades
  */
 const index = require('./index'),
-      usuarios = require('./components/usuarios/usuarios.route');
-      // vehiculos = require('./components/vehiculos/vehiculos.api'),
-      // reparaciones = require('./components/reparaciones/reparaciones.api');
+      usuarios = require('./components/usuarios/usuarios.route'),
+      vehiculos = require('./components/vehiculos/vehiculos.route');
 
 /**
  * Se definien las rutas de ExpressJS
  */
 app.use('/api', usuarios);
-// app.use('/api', vehiculos);
+app.use('/api', vehiculos);
 app.use('/', index);
 
 /// Se guarda todo lo que se ha realizado

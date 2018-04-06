@@ -9,36 +9,19 @@
   function dataStorageFactory($q, $log, $http) {
 
     const localAPI = {
-      setItem: _setItem,
-      getItem: _getItem,
-
-      getUserData: _getUserData,
+      getUsersData: _getUsersData,
+      setUserData: _setUserData,
+      getCarsData: _getCarsData,
       setSession: _setSession,
       closeSession: _closeSession,
       getSession: _getSession
     };
     return localAPI;
 
-    function _setItem(key, value) {
-      let response = true;
-
-      localStorage.setItem(key, JSON.stringify(value));
-
-      return response;
-    };
-
-    function _getItem(value) {
-      let arrayData = JSON.parse(localStorage.getItem(value));
-
-      if (!arrayData) {
-        arrayData = [];
-      };
-
-      return arrayData;
-    };
-
-    function _getUserData() {
-
+    /**
+     * Funcion que obtiene los datos de los usuarios del back end y los retorna
+     */
+    function _getUsersData() {
       let listaUsuarios = [];
 
       let peticion = $.ajax({
@@ -51,30 +34,116 @@
 
         }
       });
+
       peticion.done( (datos) => {
-
         listaUsuarios = datos;
-
         console.log('Petición realizada con éxito');
       });
       peticion.fail( () => {
         listaUsuarios = [];
         console.log('Ocurrió un error');
       });
-      console.log(listaUsuarios);
 
       return listaUsuarios;
+    }
 
+    function _setUserData(data) {
+      let response;
+
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/save_user',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+          'cedula': data.cedula,
+          'primerNombre': data.primerNombre,
+          'segundoNombre': data.segundoNombre,
+          'primerApellido': data.primerApellido,
+          'segundoApellido': data.segundoApellido,
+          'fechaNacimiento': data.fechaNacimiento,
+          'correoElectronico': data.correoElectronico,
+          'contrasenna': data.contrasenna,
+          'provincia': data.provincia,
+          'canton': data.canton,
+          'distrito': data.distrito,
+          'photo': data.photo,
+          'vehiculos': data.vehiculos
+        }
+      });
+
+      peticion.done( (datos) => {
+        response = datos.msj;
+        console.log('Petición realizada con éxito');
+      });
+      peticion.fail( (error) => {
+        response = error;
+        console.log('Ocurrió un error');
+      });
+
+      return response;
+    }
+
+    /**
+     * Funcion que obtiene los datos de los vehiculos del back end y los retorna
+     * @param {Objeto Vehiculo} pobjvehiculo 
+     */
+    function _getCarsData(pobjvehiculo){
+      let listaVehiculos = [];
+
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/get_all_cars',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+
+        }
+      });
+
+      peticion.done( (datos) => {
+        listaVehiculos = datos;
+        console.log('Petición realizada con éxito');
+      });
+      peticion.fail( () => {
+        listaVehiculos = [];
+        console.log('Ocurrió un error');
+      });
+
+      return listaVehiculos;
     }
 
     /**
      * Función que almacena las credenciales dentro del session Storage
      * @param {Credenciales} value 
      */
-    function _setSession(value) {
-      let response = true;
-      sessionStorage.setItem('session', JSON.stringify(value));
-      return response;
+    function _setSession(pcredenciales) {
+      let response;
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/login',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+          correoElectronico: pcredenciales.email,
+          contrasenna: pcredenciales.password
+        }
+      });
+      peticion.done( (datos) => {
+        response = datos;
+        console.log('Petición realizada con éxito');
+      });
+      peticion.fail( (error) => {
+        response = error;
+        console.log('Ocurrió un error');
+      });
+      console.log(response);
+
+      sessionStorage.setItem('session', JSON.stringify('sesionLS'));
+      return true;
     };
 
     /**
