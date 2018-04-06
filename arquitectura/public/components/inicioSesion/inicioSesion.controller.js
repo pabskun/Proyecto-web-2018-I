@@ -16,12 +16,6 @@
       let inicioExitoso = loginService.logIn(pcredentials);
 
       if(inicioExitoso == true){
-        swal({
-          title: "Inicio de sesión exitoso",
-          text: "Bienvenido",
-          icon: "success",
-          button: "Aceptar",
-        });
         $state.go('main');
       }else{
         swal({

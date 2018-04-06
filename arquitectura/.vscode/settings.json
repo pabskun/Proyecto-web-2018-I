@@ -2,7 +2,7 @@
     "editor.wordWrap": "on",
     "explorer.confirmDelete": true,
     "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "material-icon-theme.activeIconPack": "angular",
     "material-icon-theme.files.associations": {
         "*.controller.js": "angular-component",

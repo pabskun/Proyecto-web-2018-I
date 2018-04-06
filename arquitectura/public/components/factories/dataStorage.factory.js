@@ -1,21 +1,21 @@
 (() => {
   'use strict';
   angular
-  .module('tallerRapidito')
-  .factory('dataStorageFactory', dataStorageFactory);
+    .module('tallerRapidito')
+    .factory('dataStorageFactory', dataStorageFactory);
 
   dataStorageFactory.$inject = ['$q', '$log', '$http'];
 
-  function dataStorageFactory($q, $log, $http){
+  function dataStorageFactory($q, $log, $http) {
 
     const localAPI = {
-      setItem : _setItem,
-      getItem : _getItem,
+      setItem: _setItem,
+      getItem: _getItem,
 
-      getUserData : _getUserData,
-      setSession : _setSession,
-      closeSession : _closeSession,
-      getSession : _getSession
+      getUserData: _getUserData,
+      setSession: _setSession,
+      closeSession: _closeSession,
+      getSession: _getSession
     };
     return localAPI;
 
@@ -30,7 +30,7 @@
     function _getItem(value) {
       let arrayData = JSON.parse(localStorage.getItem(value));
 
-      if (!arrayData){
+      if (!arrayData) {
         arrayData = [];
       };
 
@@ -38,8 +38,33 @@
     };
 
     function _getUserData() {
-      
-      return $http.get('http://localhost:4000/api/get_all_users');
+
+      let listaUsuarios = [];
+
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/get_all_users',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+
+        }
+      });
+      peticion.done( (datos) => {
+
+        listaUsuarios = datos;
+
+        console.log('Petición realizada con éxito');
+      });
+      peticion.fail( () => {
+        listaUsuarios = [];
+        console.log('Ocurrió un error');
+      });
+      console.log(listaUsuarios);
+
+      return listaUsuarios;
+
     }
 
     /**
