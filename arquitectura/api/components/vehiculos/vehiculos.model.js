@@ -1,8 +1,8 @@
 //Requerimos mongoose
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //Esquema de usuarios
-let CarSchema = new mongoose.Schema({
+var CarSchema = new mongoose.Schema({
   modelo : String,
   matricula : String,
   marca : String,

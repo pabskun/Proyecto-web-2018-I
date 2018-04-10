@@ -12,6 +12,7 @@
       getUsersData: _getUsersData,
       setUserData: _setUserData,
       getCarsData: _getCarsData,
+      setCarData: _setCarData,
       setSession: _setSession,
       closeSession: _closeSession,
       getSession: _getSession
@@ -30,16 +31,15 @@
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
-        data: {
-
-        }
+        data: {}
       });
 
-      peticion.done( (datos) => {
-        listaUsuarios = datos;
-        console.log('Petición realizada con éxito');
+      peticion.done((usuarios) => {
+        console.log('Datos que vienen desde la base de datos')
+        console.log(usuarios);
+        listaUsuarios = usuarios;
       });
-      peticion.fail( () => {
+      peticion.fail(() => {
         listaUsuarios = [];
         console.log('Ocurrió un error');
       });
@@ -73,11 +73,11 @@
         }
       });
 
-      peticion.done( (datos) => {
+      peticion.done((datos) => {
         response = datos.msj;
         console.log('Petición realizada con éxito');
       });
-      peticion.fail( (error) => {
+      peticion.fail((error) => {
         response = error;
         console.log('Ocurrió un error');
       });
@@ -89,7 +89,7 @@
      * Funcion que obtiene los datos de los vehiculos del back end y los retorna
      * @param {Objeto Vehiculo} pobjvehiculo 
      */
-    function _getCarsData(pobjvehiculo){
+    function _getCarsData(pobjvehiculo) {
       let listaVehiculos = [];
 
       let peticion = $.ajax({
@@ -103,11 +103,11 @@
         }
       });
 
-      peticion.done( (datos) => {
+      peticion.done((datos) => {
         listaVehiculos = datos;
         console.log('Petición realizada con éxito');
       });
-      peticion.fail( () => {
+      peticion.fail(() => {
         listaVehiculos = [];
         console.log('Ocurrió un error');
       });
@@ -116,35 +116,49 @@
     }
 
     /**
-     * Función que almacena las credenciales dentro del session Storage
-     * @param {Credenciales} value 
+     * Esta funcion envia como peticion los datos del vehiculo para ser guardados en la base de datos
+     * @param {Objeto de tipo vehiculo} pnuevovehiculo 
      */
-    function _setSession(pcredenciales) {
+    function _setCarData(pnuevovehiculo) {
       let response;
+
       let peticion = $.ajax({
-        url: 'http://localhost:4000/api/login',
-        type: 'get',
+        url: 'http://localhost:4000/api/save_car',
+        type: 'post',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
         data: {
-          correoElectronico: pcredenciales.email,
-          contrasenna: pcredenciales.password
+          modelo: pnuevovehiculo.modelo,
+          matricula: pnuevovehiculo.matricula,
+          marca: pnuevovehiculo.marca,
+          image: pnuevovehiculo.image,
+          idCliente: pnuevovehiculo.idCliente,
+          reparaciones: pnuevovehiculo.reparaciones
         }
       });
-      peticion.done( (datos) => {
-        response = datos;
+
+      peticion.done((datos) => {
+        response = datos.msj;
         console.log('Petición realizada con éxito');
       });
-      peticion.fail( (error) => {
+      peticion.fail((error) => {
         response = error;
         console.log('Ocurrió un error');
       });
-      console.log(response);
 
-      sessionStorage.setItem('session', JSON.stringify('sesionLS'));
-      return true;
-    };
+      return response;
+    }
+
+    /**
+     * Función que almacena las credenciales dentro del session Storage
+     * @param {Credenciales} value 
+     */
+    function _setSession(value) {
+      let response = true;
+      sessionStorage.setItem('session', JSON.stringify(value));
+      return response;
+    }
 
     /**
      * Función que elimina los datos de la sesión activa

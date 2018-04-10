@@ -1,7 +1,7 @@
 const carModel = require('./vehiculos.model');
 
-module.exports.save = (req, res) => {
-  let newCar = new carModel({
+module.exports.registrar = (req, res) => {
+  var newCar = new carModel({
     modelo : req.body.modelo,
     matricula : req.body.matricula,
     marca : req.body.marca,
@@ -10,7 +10,7 @@ module.exports.save = (req, res) => {
     reparaciones : req.body.reparaciones
   });
 
-  newCar.registrar((err) => {
+  newCar.save((err) => {
     if(err){
       res.json({success:false, msg: 'Ha ocurrido un error en el registro del vehiculo' + err});
     }else{

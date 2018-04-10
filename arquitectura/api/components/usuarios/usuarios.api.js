@@ -1,7 +1,7 @@
 const UserModel = require('./usuarios.model');
 
 module.exports.registrar = (req, res) => {
-  let newUser = new UserModel({
+  var newUser = new UserModel({
     cedula              :  req.body.cedula,
     primerNombre        :  req.body.primerNombre,
     segundoNombre       :  req.body.segundoNombre,
@@ -19,16 +19,16 @@ module.exports.registrar = (req, res) => {
 
   newUser.save((err) => {
     if(err){
-      res.json({success:false, msg: 'Ha ocurrido un error en el registro de usuarios' + err});
+      res.json({success:false, msj: 'Ha ocurrido un error en el registro de usuarios' + err});
     }else{
-      res.json({success:true, msg:'Se registró el usuario correctamente'});
+      res.json({success:true, msj:'Se registró el usuario correctamente'});
     }
   });
 };
 
 module.exports.listarTodos = (req,res) => {
-  UserModel.find().then((user) => {
-    res.send(user);
+  UserModel.find().then((usuarios) => {
+    res.send(usuarios);
   });
 };
 

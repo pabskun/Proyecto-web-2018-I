@@ -33,12 +33,12 @@
 
     vm.registrarVehiculo = (pnuevovehiculo, urlImagen) => {
       
-      let objVehiculoNuevo = new Vehiculo(pnuevovehiculo.modelo, pnuevovehiculo.matricula, pnuevovehiculo.marca, urlImagen),
+      let objVehiculoNuevo = new Vehiculo(pnuevovehiculo.modelo, pnuevovehiculo.matricula, pnuevovehiculo.marca, urlImagen, userAuth.getcedula()),
           registroExitoso;
 
       console.log(objVehiculoNuevo);
 
-      registroExitoso = servicioUsuarios.addVehiculoPorUsuario(userAuth.getcedula(), objVehiculoNuevo);
+      registroExitoso = servicioUsuarios.addVehiculo(objVehiculoNuevo);
 
       if(registroExitoso == true){
         swal({

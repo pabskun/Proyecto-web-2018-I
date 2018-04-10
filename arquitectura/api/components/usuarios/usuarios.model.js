@@ -1,21 +1,21 @@
 //Requerimos mongoose
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //Esquema de usuarios
-let UserSchema = new mongoose.Schema({
-  cedula : String,
-  primerNombre : String,
-  segundoNombre : String,
-  primerApellido : String,
-  segundoApellido : String,
-  fechaNacimiento : String,
-  correoElectronico : String,
-  contrasenna : String,
-  provincia : String,
-  canton : String,
-  distrito : String,
-  photo : String,
-  vehiculos : Array
+var UserSchema = new mongoose.Schema({
+  cedula : {type : String, required : true},
+  primerNombre : {type : String, required : true},
+  segundoNombre : {type : String},
+  primerApellido : {type : String, required : true},
+  segundoApellido : {type : String},
+  fechaNacimiento : {type : String, required : true},
+  correoElectronico : {type : String, required : true},
+  contrasenna : {type : String, required : true},
+  provincia : {type : String, required : true},
+  canton : {type : String, required : true},
+  distrito : {type : String, required : true},
+  photo : {type : String, required : true},
+  vehiculos : {type : Array, required : true}
 });
 
 //nombre del modelo dentro del back end y el userSchema es el nombre dentro de mongoose
