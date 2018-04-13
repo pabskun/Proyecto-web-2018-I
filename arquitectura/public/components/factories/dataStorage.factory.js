@@ -11,6 +11,7 @@
     const localAPI = {
       getUsersData: _getUsersData,
       setUserData: _setUserData,
+      updateUserData: _updateUserData,
       getCarsData: _getCarsData,
       setCarData: _setCarData,
       setSession: _setSession,
@@ -53,6 +54,44 @@
       let peticion = $.ajax({
         url: 'http://localhost:4000/api/save_user',
         type: 'post',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+          'cedula': data.cedula,
+          'primerNombre': data.primerNombre,
+          'segundoNombre': data.segundoNombre,
+          'primerApellido': data.primerApellido,
+          'segundoApellido': data.segundoApellido,
+          'fechaNacimiento': data.fechaNacimiento,
+          'correoElectronico': data.correoElectronico,
+          'contrasenna': data.contrasenna,
+          'provincia': data.provincia,
+          'canton': data.canton,
+          'distrito': data.distrito,
+          'photo': data.photo,
+          'vehiculos': data.vehiculos
+        }
+      });
+
+      peticion.done((datos) => {
+        response = datos.msj;
+        console.log('Petición realizada con éxito');
+      });
+      peticion.fail((error) => {
+        response = error;
+        console.log('Ocurrió un error');
+      });
+
+      return response;
+    }
+
+    function _updateUserData(data) {
+      let response;
+
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/update_user',
+        type: 'put',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,

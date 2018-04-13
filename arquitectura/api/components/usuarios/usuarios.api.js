@@ -17,7 +17,7 @@ module.exports.registrar = (req, res) => {
     vehiculos           :  req.body.vehiculos,
   });
 
-  newUser.save((err) => {
+  newUser. ((err) => {
     if(err){
       res.json({success:false, msj: 'Ha ocurrido un error en el registro de usuarios' + err});
     }else{

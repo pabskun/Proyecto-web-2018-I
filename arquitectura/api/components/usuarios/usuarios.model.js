@@ -18,6 +18,9 @@ var UserSchema = new mongoose.Schema({
   vehiculos : {type : Array, required : true}
 });
 
+// encriptacion en proceso para los futuros proyectos :)
+// UserSchema.method.encriptar = () => {}
+
 //nombre del modelo dentro del back end y el userSchema es el nombre dentro de mongoose
 module.exports = mongoose.model('User', UserSchema); 
 //User va en mayúscula y singular aunque en la bd todo se pone en minúscula y plural
